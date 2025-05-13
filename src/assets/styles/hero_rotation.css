@@ -1,0 +1,122 @@
+.naming_circle:has(#order_1:checked) {
+    --rotation: -90deg;
+}
+
+.naming_circle:has(#order_2:checked) {
+    --rotation: -180deg;
+}
+
+.naming_circle:has(#order_3:checked) {
+    --rotation: -270deg;
+}
+
+.naming_circle:has(#order_4:checked) {
+    --rotation: -360deg;
+}
+
+.naming_circle:has(#order_1:checked) label {
+    --rotation_img: 90deg;
+}
+
+.naming_circle:has(#order_2:checked) label {
+    --rotation_img: 180deg;
+}
+
+.naming_circle:has(#order_3:checked) label {
+    --rotation_img: 270deg;
+}
+
+.naming_circle:has(#order_4:checked) label {
+    --rotation_img: 360deg;
+}
+
+.naming:has(#order_1:checked) .naming_text:nth-of-type(1) {
+    order: 1;
+    animation: scrolldown 0.5s ease-in-out;
+}
+
+.naming:has(#order_2:checked) .naming_text:nth-of-type(2) {
+    order: 1;
+    animation: scrolldown 0.5s ease-in-out;
+}
+
+.naming:has(#order_2:checked) .naming_text:nth-of-type(1) {
+    order: 1;
+}
+
+.naming:has(#order_3:checked) .naming_text:nth-of-type(3) {
+    order: 1;
+    animation: scrolldown 0.5s ease-in-out;
+}
+
+.naming:has(#order_3:checked) .naming_text:nth-of-type(2) {
+    order: 1;
+}
+
+.naming:has(#order_3:checked) .naming_text:nth-of-type(1) {
+    order: 1;
+}
+
+.naming:has(#order_4:checked) .naming_text:nth-of-type(4) {
+    order: 1;
+    animation: scrolldown 0.5s ease-in-out;
+}
+
+.naming:has(#order_4:checked) .naming_text:nth-of-type(3) {
+    order: 1;
+}
+
+.naming:has(#order_4:checked) .naming_text:nth-of-type(2) {
+    order: 1;
+}
+
+.naming:has(#order_4:checked) .naming_text:nth-of-type(1) {
+    order: 1;
+}
+
+.naming:not(:has([id^="order_"]:checked)) .naming_text:nth-of-type(1) {
+    background: #fff2dfd5;
+    filter: none;
+}
+
+.naming:has(#order_1:checked) .naming_text:nth-of-type(2) {
+    background: #fff2dfd5;
+    filter: none;
+    animation: scrollup 0.5s ease-in-out;
+}
+
+.naming:has(#order_2:checked) .naming_text:nth-of-type(3) {
+    background: #fff2dfd5;
+    filter: none;
+    animation: scrollup 0.5s ease-in-out;
+}
+
+.naming:has(#order_3:checked) .naming_text:nth-of-type(4) {
+    background: #fff2dfd5;
+    filter: none;
+    animation: scrollup 0.5s ease-in-out;
+}
+
+.naming:has(#order_4:checked) .naming_text:nth-of-type(1) {
+    background: #fff2dfd5;
+    filter: none;
+    animation: scrollup 0.5s ease-in-out;
+}
+
+@keyframes scrolldown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100dvh);
+    }
+}
+
+@keyframes scrollup {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-25dvh);
+    }
+}

@@ -1,0 +1,127 @@
+@import url(./style.css);
+@import url(./normalize.css);
+
+body{
+    background-image: none !important;
+}
+
+main {
+    margin: 20px 0 20px 0;
+}
+
+/* -------------------------------Page naming-------------------------- */
+.FAQ_naming {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin: 10px;
+    color: #8C6E63;
+    font-size: 24px;
+}
+
+.svg_naming {
+    width: 100px;
+    height: 100px;
+    fill: #8C6E63;
+}
+
+.FAQ_naming h3 {
+    text-align: center;
+}
+
+/* --------------------------------------------------------------- */
+.FAQ_menu {
+    padding: 0 15% 0 15%;
+    width: 100%;
+    justify-items: center;
+}
+
+/* --------------------------------FAQ cards-------------------- */
+.FAQ_card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D3A376;
+    border-radius: 25px;
+    padding: 10px;
+    width: 95%;
+    color: #3E2522;
+    margin: 20px 0 20px 0;
+}
+
+.FAQ_symbol {
+    width: 50px;
+    height: 50px;
+    fill: #3E2522;
+}
+
+.FAQ_quest {
+    font-size: 22px;
+}
+
+.FAQ_card input {
+    display: none;
+}
+
+.FAQ_card label {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 50px;
+    height: 60px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.FAQ_card label span {
+    display: inline-block;
+    content: "";
+    width: 25px;
+    height: 8px;
+    background: #8C6E63;
+}
+
+.FAQ_card label span:nth-of-type(1) {
+    transform: rotate(45deg) translateY(-4px);
+}
+
+.FAQ_card label span:nth-of-type(2) {
+    transform: rotate(-45deg) translateY(4px);
+}
+
+.FAQ_answer {
+    display: none;
+    height: 0;
+    transform: scaleY(0);
+    transition: 0.2s ease-in-out;
+    margin: 10px;
+    font-size: 20px;
+}
+
+/* -------------------------------------------------------------------- */
+/* -------------------------card opening---------------------------- */
+
+[id^="FAQ_"]:checked~label {
+    transform: rotate(90deg);
+}
+
+[id^="FAQ_"]:checked~.FAQ_answer {
+    display: flex;
+    margin-top: 20px;
+    height: auto;
+    transform: scaleY(1);
+}
+
+@media(max-width: 500px) {
+    .FAQ_menu {
+        padding: 5px;
+    }
+
+    .FAQ_card {
+        width: 100%;
+    }
+}

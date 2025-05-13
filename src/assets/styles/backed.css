@@ -1,0 +1,322 @@
+@import url(./style.css);
+@import url(./normalize.css);
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+
+.menu {
+    display: flex;
+    margin: 15px;
+    border-radius: 25px;
+    background: #FFE0B2;
+    width: 89%;
+    align-items: space-around;
+    justify-content: space-around;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+[class^="page_"] {
+    display: flex;
+    width: 100%;
+    align-items: space-around;
+    justify-content: space-around;
+}
+
+.card label {
+    display: flex;
+    position: relative;
+    width: var(--container_width);
+    height: var(--container_height);
+    gap: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+    width: 350px;
+    padding: 15px 15px 30px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    background: #FFF2DF;
+    box-shadow: #D3A376 0px 30px 50px -12px inset, #e0d7c9 0px 18px 26px -18px inset;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+}
+
+.card label img {
+    width: 100%;
+    height: 360px;
+    border-radius: 35px;
+}
+
+.card_text>p:nth-of-type(2) {
+    text-align: justify;
+    padding: 0 20px;
+}
+
+.card input {
+    display: none;
+}
+
+.card .full_text {
+    display: none;
+}
+
+.card .back_btn {
+    display: none;
+}
+
+.card .img_scroll {
+    display: none;
+}
+
+.img_scroll button {
+    background: none;
+    border: #3E2522 solid 2px;
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.img_scroll button img {
+    width: 80px !important;
+    height: 80px !important;
+}
+
+/* ----------------cards_scroll------------------ */
+
+[id^="backed_card_"]:checked+.card_btn {
+    width: 95%;
+    justify-content: flex-start;
+    padding: 2%;
+    cursor: default;
+}
+
+[id^="backed_card_"]:checked+.card_btn .card_text {
+    display: none;
+}
+
+[id^="backed_card_"]:checked+.card_btn .full_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: large;
+    width: 600px;
+    margin: 10px;
+}
+
+[id^="backed_card_"]:checked+.card_btn p,
+[id^="backed_card_"]:checked+.card_btn h3,
+[id^="backed_card_"]:checked+.card_btn h4,
+[id^="backed_card_"]:checked+.card_btn ul {
+    width: fit-content;
+}
+
+[id^="backed_card_"]:checked+.card_btn h3,
+[id^="backed_card_"]:checked+.card_btn h4 {
+    font-size: 25px;
+}
+
+[id^="backed_card_"]:checked+.card_btn p {
+    text-align: justify;
+}
+
+[id^="backed_card_"]:checked+.card_btn .img_scroll {
+    display: flex;
+    position: absolute;
+    top: 350px;
+    left: 7vh;
+    z-index: 10;
+}
+
+[id^="backed_card_"]:checked+.card_btn .bnt_View_more {
+    display: none;
+}
+
+[id^="backed_card_"]:checked+.card_btn .back_btn {
+    display: inline-block;
+    color: #3E2522;
+    border: #3E2522 solid 3px;
+    border-radius: 25px;
+    padding: 5px;
+    background: none;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 1%;
+    margin-right: 90%;
+    cursor: pointer;
+}
+
+[id^="backed_card_"]:checked+.card_btn img {
+    width: 400px;
+    border-radius: 0;
+    position: relative;
+    top: 0;
+}
+
+/* ------------------------------------------ */
+
+[class*="page_"] {
+    display: none;
+}
+
+main:has(input[id="value-1"]:checked) .page_1,
+main:has(input[id="value-2"]:checked) .page_2,
+main:has(input[id="value-3"]:checked) .page_3,
+main:has(input[id="value-4"]:checked) .page_4,
+main:has(input[id="value-5"]:checked) .page_5,
+main:has(input[id="value-6"]:checked) .page_6,
+main:has(input[id="value-7"]:checked) .page_7,
+main:has(input[id="value-8"]:checked) .page_8 {
+    display: flex;
+    width: 100%;
+    align-items: space-evenly;
+    justify-content: space-evenly;
+}
+
+/* ----------------slide_bar------------------ */
+.lowbar {
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    max-width: 80%;
+}
+
+.slide_buttons input {
+    display: none;
+}
+
+.slide_buttons {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 15px;
+    background-color: #fff;
+    color: #000000;
+    width: var(--container_width);
+    max-width: 100%;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    border: 1px solid #3E2522;
+}
+
+.slide_buttons label {
+    min-width: calc(var(--container_width) / 4);
+    width: calc(var(--container_width) / 4);
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    font-weight: bold;
+    letter-spacing: -1px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.selection {
+    display: none;
+    position: absolute;
+    height: 100%;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    transition: .15s ease;
+    width: calc(var(--container_width) / 2);
+}
+
+.slide_buttons label:has(input:checked) {
+    color: #fff;
+}
+
+.slide_buttons label:has(input:checked)~.selection {
+    background-color: #3E2522;
+    display: inline-block;
+}
+
+.slide_buttons {
+    --container_width: 360px;
+}
+
+
+@media (max-width: calc(var(--container_width)* 1.5)) {
+    .slide_buttons {
+        overflow-x: scroll;
+    }
+}
+
+/* -------------------------------------------------- */
+
+@media (max-width:600px) {
+
+    .menu {
+        width: 95%;
+        margin: 5px;
+    }
+
+    .card:has(input:not(:checked)) label img {
+        height: 320px;
+    }
+
+    .card .card_btn {
+        width: 97%;
+    }
+
+    [id^="backed_card_"]:checked+.card_btn {
+        justify-content: center;
+        justify-items: center;
+        width: 95%;
+    }
+}
+
+@media (min-width: 930px) {
+    .card:hover:has(input:not(:checked)) img {
+        box-shadow: 0px 0px 30px 1px rgba(255, 217, 0, 0.3);
+        transition: 0.15s ease-in-out;
+    }
+
+    .card:hover:has(input:not(:checked)) {
+        transform: translateY(-15px) scale(1.05);
+        transition: 0.15s ease-in-out;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    [id^="backed_card_"]:checked+.card_btn .card_text {
+        width: 100%;
+    }
+
+    [id^="backed_card_"]:checked+.card_btn .full_text {
+        display: flex;
+        width: 100%;
+    }
+
+    [id^="backed_card_"]:checked+.card_btn .back_btn {
+        margin-right: 85%;
+    }
+}
+
+@media (max-width: 500px) {
+    [id^="card_"]:checked+.card_btn .img_scroll {
+        top: 340px;
+        left: 2vh;
+    }
+
+    [id^="card_"]:checked+.card_btn img {
+        width: 95%;
+    }
+}

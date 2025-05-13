@@ -1,0 +1,478 @@
+@import url(./style.css);
+@import url(./normalize.css);
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+
+main>* {
+    margin: 20px 0 20px 0;
+}
+
+.menu_wh_nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+
+.left_nav {
+    display: flex;
+    flex-direction: column;
+    background: #ffe0b29d;
+    font-size: 16px;
+    padding: 2%;
+    border-radius: 20px;
+}
+
+.left_nav ul {
+    display: none;
+}
+
+.left_nav li {
+    background: #d3a3768f;
+    margin: 15px 0 15px 0;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.left_nav li:hover {
+    background: #3e252294;
+}
+
+.left_nav h3 {
+    font-size: 20px;
+    color: #3E2522;
+    position: sticky;
+    top: 120px;
+    left: 0;
+}
+
+.left_nav a {
+    color: #000000;
+    text-decoration: none;
+}
+
+#left_nav_burger {
+    display: none;
+}
+
+label[for="left_nav_burger"] {
+    display: none;
+}
+
+.menu_wh_nav:has([class^="page_"]:is(.none)):has([id^="card_"]:checked) .left_nav {
+    display: none;
+    width: 0;
+}
+
+.hide {
+    display: none !important;
+    width: 0;
+}
+
+@media(max-width:1205px) {
+
+    .left_nav ul {
+        top: 40px;
+        left: 0;
+    }
+
+    .left_nav h3 {
+        top: 10px;
+        left: 0;
+    }
+
+    .left_nav {
+        position: relative;
+        top: 0;
+        left: -100vh;
+        z-index: 10;
+        transition: 0.3 ease;
+        width: 0;
+        display: none;
+    }
+
+    label[for="left_nav_burger"] {
+        display: block;
+        background: #ffe0b29d;
+        width: 80%;
+        padding: 20px 0;
+        border-radius: 15px;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    main:has(#left_nav_burger:checked) .left_nav {
+        left: 0;
+        width: auto;
+        display: flex;
+    }
+
+    main:has([class^="page_"]:is(.none)):has([id^="card_"]:checked) label[for="left_nav_burger"] {
+        display: none !important;
+        width: 0;
+    }
+}
+
+.menu {
+    display: flex;
+    margin: 15px;
+    border-radius: 25px;
+    background: #FFE0B2;
+    width: 80%;
+    align-items: space-around;
+    justify-content: space-around;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+main:has(input[id="value-1"]:checked) label[for="left_nav_burger"],
+main:has(input[id="value-5"]:checked) label[for="left_nav_burger"],
+main:has(input[id="value-6"]:checked) label[for="left_nav_burger"],
+main:has(input[id="value-7"]:checked) label[for="left_nav_burger"],
+main:has(input[id="value-8"]:checked) label[for="left_nav_burger"] {
+    display: none;
+}
+
+main:has(input[id="value-1"]:checked) .left_nav,
+main:has(input[id="value-5"]:checked) .left_nav,
+main:has(input[id="value-6"]:checked) .left_nav,
+main:has(input[id="value-7"]:checked) .left_nav,
+main:has(input[id="value-8"]:checked) .left_nav {
+    display: none;
+}
+
+main:has(input[id="value-1"]:checked) ul[data-title="nav_page_1"],
+main:has(input[id="value-2"]:checked) ul[data-title="nav_page_2"],
+main:has(input[id="value-3"]:checked) ul[data-title="nav_page_3"],
+main:has(input[id="value-4"]:checked) ul[data-title="nav_page_4"],
+main:has(input[id="value-5"]:checked) ul[data-title="nav_page_5"],
+main:has(input[id="value-6"]:checked) ul[data-title="nav_page_6"],
+main:has(input[id="value-7"]:checked) ul[data-title="nav_page_7"],
+main:has(input[id="value-8"]:checked) ul[data-title="nav_page_8"] {
+    display: block;
+    position: sticky;
+    top: 150px;
+    left: 0;
+}
+
+div[class^="page_"]:has([id^="card_"]:checked) {
+    display: flex;
+}
+
+[class*="page_"] {
+    display: none;
+}
+
+main:has(input[id="value-1"]:checked) .page_1,
+main:has(input[id="value-2"]:checked) .page_2,
+main:has(input[id="value-3"]:checked) .page_3,
+main:has(input[id="value-4"]:checked) .page_4,
+main:has(input[id="value-5"]:checked) .page_5,
+main:has(input[id="value-6"]:checked) .page_6,
+main:has(input[id="value-7"]:checked) .page_7,
+main:has(input[id="value-8"]:checked) .page_8 {
+    display: flex;
+    width: 100%;
+    align-items: space-evenly;
+    justify-content: space-evenly;
+}
+
+[class^="page_"]>div {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+
+.card label {
+    display: flex;
+    position: relative;
+    width: var(--container_width);
+    height: var(--container_height);
+    gap: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+    width: 350px;
+    padding: 15px 15px 30px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    background: #FFF2DF;
+    box-shadow: #D3A376 0px 30px 50px -12px inset, #e0d7c9 0px 18px 26px -18px inset;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+}
+
+.card label img {
+    width: 100%;
+    height: 360px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.card_text{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card_text>p:nth-of-type(2) {
+    text-align: justify;
+    padding: 0 20px;
+}
+
+.card input {
+    display: none;
+}
+
+.card .full_text {
+    display: none;
+}
+
+.card .back_btn {
+    display: none;
+}
+
+.card .img_scroll {
+    display: none;
+}
+
+.img_scroll button {
+    background: none;
+    border: #3E2522 solid 2px;
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.img_scroll button img {
+    width: 80px !important;
+    height: 80px !important;
+}
+
+/* ----------------cards_scroll------------------ */
+
+[id^="card_"]:checked+.card_btn {
+    width: 95%;
+    justify-content: flex-start;
+    padding: 2%;
+    cursor: default;
+}
+
+[id^="card_"]:checked+.card_btn .card_text {
+    display: none;
+}
+
+[id^="card_"]:checked+.card_btn .full_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: large;
+    width: 600px;
+    margin: 10px;
+}
+
+[id^="card_"]:checked+.card_btn p,
+[id^="card_"]:checked+.card_btn h3,
+[id^="card_"]:checked+.card_btn h4,
+[id^="card_"]:checked+.card_btn ul {
+    width: fit-content;
+}
+
+[id^="card_"]:checked+.card_btn h3,
+[id^="card_"]:checked+.card_btn h4 {
+    font-size: 25px;
+}
+
+[id^="card_"]:checked+.card_btn p {
+    text-align: justify;
+}
+
+[id^="card_"]:checked+.card_btn .img_scroll {
+    display: flex;
+    position: absolute;
+    top: 350px;
+    left: 7vh;
+    z-index: 10;
+}
+
+[id^="card_"]:checked+.card_btn .bnt_View_more {
+    display: none;
+}
+
+[id^="card_"]:checked+.card_btn .back_btn {
+    display: inline-block;
+    color: #3E2522;
+    border: #3E2522 solid 3px;
+    border-radius: 25px;
+    padding: 5px;
+    background: none;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 1%;
+    margin-right: 90%;
+    cursor: pointer;
+}
+
+[id^="card_"]:checked+.card_btn img {
+    width: 400px;
+    border-radius: 0;
+    position: relative;
+    top: 0;
+}
+
+/* ------------------------------------------ */
+
+
+/* ----------------slide_bar------------------ */
+.lowbar {
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    max-width: 80%;
+}
+
+.slide_buttons input {
+    display: none;
+}
+
+.slide_buttons {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 15px;
+    background-color: #fff;
+    color: #000000;
+    width: var(--container_width);
+    max-width: 100%;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    border: 1px solid #3E2522;
+}
+
+.slide_buttons label {
+    min-width: 70px;
+    width: 70px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    font-weight: bold;
+    letter-spacing: -1px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.selection {
+    display: none;
+    position: absolute;
+    height: 100%;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    transition: .15s ease;
+    width: calc(var(--container_width) / 8);
+}
+
+.slide_buttons label:has(input:checked) {
+    color: #fff;
+}
+
+.slide_buttons label:has(input:checked)~.selection {
+    background-color: #3E2522;
+    display: inline-block;
+}
+
+.slide_buttons {
+    --container_width: 560px;
+}
+
+
+@media (max-width: 600px) {
+    .slide_buttons {
+        overflow-x: scroll;
+    }
+}
+
+/* -------------------------------------------------- */
+
+@media (max-width:600px) {
+
+    .menu {
+        width: 95%;
+        margin: 5px;
+    }
+
+    .card:has(input:not(:checked)) label img {
+        height: 320px;
+    }
+
+    .card .card_btn {
+        width: 97%;
+    }
+
+    [id^="card_"]:checked+.card_btn {
+        justify-content: center;
+        justify-items: center;
+        width: 95%;
+    }
+}
+
+@media (min-width: 930px) {
+    .card:hover:has(input:not(:checked)) img {
+        box-shadow: 0px 0px 30px 1px rgba(255, 217, 0, 0.3);
+        transition: 0.15s ease-in-out;
+    }
+
+    .card:hover:has(input:not(:checked)) {
+        transform: translateY(-15px) scale(1.05);
+        transition: 0.15s ease-in-out;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    [id^="card_"]:checked+.card_btn .card_text {
+        width: 100%;
+    }
+
+    [id^="card_"]:checked+.card_btn .full_text {
+        display: flex;
+        width: 100%;
+    }
+
+    [id^="card_"]:checked+.card_btn .back_btn {
+        margin-right: 85%;
+    }
+}
+
+@media (max-width: 500px) {
+    [id^="card_"]:checked+.card_btn .img_scroll {
+        position: static;
+    }
+
+    [id^="card_"]:checked+.card_btn .back_btn {
+        margin-right: 0;
+    }
+
+    [id^="card_"]:checked+.card_btn img {
+        width: 95%;
+    }
+}
