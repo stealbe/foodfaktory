@@ -246,7 +246,7 @@ main:has(input[id="value-8"]:checked) .page_8 {
     display: none;
 }
 
-/* .img_scroll button {
+.img_scroll button {
     background: none;
     border: #3E2522 solid 2px;
     border-radius: 5px;
@@ -259,7 +259,7 @@ main:has(input[id="value-8"]:checked) .page_8 {
 .img_scroll button img {
     width: 80px !important;
     height: 80px !important;
-} */
+}
 
 /* ----------------cards_scroll------------------ */
 
