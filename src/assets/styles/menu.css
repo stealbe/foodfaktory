@@ -347,7 +347,7 @@ main:has(input[id="value-8"]:checked) .page_8 {
     display: flex;
     justify-content: center;
     overflow-x: hidden;
-    max-width: 80%;
+    width: 100%;
 }
 
 .slide_buttons input {
