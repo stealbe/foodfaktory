@@ -129,6 +129,7 @@ label[for="left_nav_burger"] {
     justify-content: space-around;
     padding-top: 15px;
     padding-bottom: 15px;
+    min-width: 80%;
 }
 
 main:has(input[id="value-1"]:checked) label[for="left_nav_burger"],
