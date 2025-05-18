@@ -4,7 +4,7 @@
 main {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-content: space-evenly;
     flex-wrap: nowrap;
 }
