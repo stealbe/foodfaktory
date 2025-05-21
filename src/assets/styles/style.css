@@ -453,7 +453,7 @@ main:has([id*="card_"]:checked) .left_nav {
     body:has(#burger_checkbox:checked) nav ul {
         top: 150px;
         bottom: 0;
-        height: 100vh;
+        padding-bottom: 60px;
     }
 
     body:has(#burger_checkbox:checked) {

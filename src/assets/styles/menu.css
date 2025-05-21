@@ -4,7 +4,7 @@
 main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-content: space-evenly;
     flex-wrap: nowrap;
 }
@@ -108,6 +108,7 @@ label[for="left_nav_burger"] {
         font-weight: bold;
         font-size: 20px;
         text-align: center;
+        margin: 0 auto;
     }
 
     main:has(#left_nav_burger:checked) .left_nav {
@@ -132,6 +133,7 @@ label[for="left_nav_burger"] {
     justify-content: space-around;
     padding-top: 15px;
     padding-bottom: 15px;
+    gap: 24px;
 }
 
 main:has(input[id="value-1"]:checked) label[for="left_nav_burger"],
@@ -269,11 +271,16 @@ main:has(input[id="value-8"]:checked) .page_8 {
 
 /* ----------------cards_scroll------------------ */
 
+.card:has([id^="card_"]:checked) {
+    margin: 0 auto;
+}
+
 [id^="card_"]:checked+.card_btn {
     width: 95%;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 2%;
     cursor: default;
+    gap: 16px;
 }
 
 [id^="card_"]:checked+.card_btn .card_text {
@@ -285,7 +292,7 @@ main:has(input[id="value-8"]:checked) .page_8 {
     flex-direction: column;
     justify-content: flex-start;
     font-size: large;
-    width: 600px;
+    max-width: 600px;
     margin: 10px;
 }
 
@@ -309,8 +316,20 @@ main:has(input[id="value-8"]:checked) .page_8 {
     display: flex;
     position: absolute;
     top: 350px;
-    left: 7vh;
     z-index: 10;
+}
+
+[id^="card_"]:checked+.card_btn div:has(.img_scroll) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+[id^="card_"]:not(:checked)+.card_btn div:has(#card_main_img) {
+    width: 100%;
 }
 
 [id^="card_"]:checked+.card_btn .bnt_View_more {
@@ -334,9 +353,6 @@ main:has(input[id="value-8"]:checked) .page_8 {
 
 [id^="card_"]:checked+.card_btn img {
     width: 400px;
-    border-radius: 0;
-    position: relative;
-    top: 0;
 }
 
 /* ------------------------------------------ */
@@ -469,9 +485,6 @@ main:has(input[id="value-8"]:checked) .page_8 {
 }
 
 @media (max-width: 500px) {
-    [id^="card_"]:checked+.card_btn .img_scroll {
-        position: static;
-    }
 
     [id^="card_"]:checked+.card_btn .back_btn {
         margin-right: 0;
@@ -479,5 +492,12 @@ main:has(input[id="value-8"]:checked) .page_8 {
 
     [id^="card_"]:checked+.card_btn img {
         width: 95%;
+    }
+}
+
+@media (max-width: 350px) {
+    [id^="card_"]:checked+.card_btn .img_scroll {
+        position: static;
+        top: 0;
     }
 }

@@ -13,6 +13,7 @@
     height: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
+    gap: 24px;
 }
 
 .card {
@@ -95,11 +96,12 @@ main h2 {
     border-radius: 35px;
     padding: 15px;
     max-height: 224px;
-    overflow: hidden;
+    overflow-y: scroll;
     font-size: 20px;
     transition: all 0.5s ease-in-out;
     background: #fff2df67;
     filter: blur(1.5px);
+    scrollbar-width: none;
 }
 
 .naming p {
@@ -287,4 +289,10 @@ a {
         transition: 0.15s ease-in-out;
     }
 
+}
+
+@media (max-width: 850px) {
+    .naming {
+        display: none;
+    }
 }
