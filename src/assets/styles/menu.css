@@ -168,6 +168,7 @@ main:has(input[id="value-8"]:checked) ul[data-title="nav_page_8"] {
 
 div[class^="page_"]:has([id^="card_"]:checked) {
     display: flex;
+    justify-content: center;
 }
 
 [class*="page_"] {
@@ -186,6 +187,11 @@ main:has(input[id="value-8"]:checked) .page_8 {
     width: 100%;
     align-items: space-evenly;
     justify-content: space-evenly;
+}
+
+.menu:has([id^="card_"]:checked)
+{
+    width: fit-content;
 }
 
 [class^="page_"]>div {
@@ -281,6 +287,8 @@ main:has(input[id="value-8"]:checked) .page_8 {
     padding: 2%;
     cursor: default;
     gap: 16px;
+    background: none;
+    box-shadow: none;
 }
 
 [id^="card_"]:checked+.card_btn .card_text {
