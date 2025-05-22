@@ -137,10 +137,6 @@ main {
     box-shadow: #FFE0B2 0 0 20px 12px;
 }
 
-.menu:has(input[id^="set_card_"]:checked) {
-    max-width: 1020px;
-}
-
 .bnt_View_more {
     padding: 10px;
     background-color: #8C6E63;
