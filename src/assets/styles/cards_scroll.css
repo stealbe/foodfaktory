@@ -108,7 +108,8 @@
 [id*="card_"]:checked+.card_btn p,
 [id*="card_"]:checked+.card_btn h3,
 [id*="card_"]:checked+.card_btn h4,
-[id*="card_"]:checked+.card_btn ul {
+[id*="card_"]:checked+.card_btn ul,
+[id*="card_"]:checked+.card_btn li {
     width: fit-content;
 }
 
