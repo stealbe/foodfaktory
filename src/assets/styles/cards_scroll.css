@@ -138,7 +138,7 @@
 
 }
 
-[id*="card_"]:not(:checked)+.card_btn div:has(#card_main_img) {
+[id*="card_"]:not(:checked)+.card_btn div:has([id*="card_main_img"]) {
     width: 100%;
 }
 
