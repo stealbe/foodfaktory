@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://foodfaktory25.pl/sitemap.xml

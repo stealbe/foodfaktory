@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^sets/?$ /src/assets/pages/sets.html [L]
+RewriteRule ^backed/?$ /src/assets/pages/backed.html [L]
+RewriteRule ^faq/?$ /src/assets/pages/FAQ.html [L]
+RewriteRule ^delivery/?$ /src/assets/pages/delivery.html [L]

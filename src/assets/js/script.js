@@ -334,21 +334,21 @@ document.addEventListener("DOMContentLoaded", () => {
 //     });
 // });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const elements = document.querySelectorAll(".reveal");
+// document.addEventListener("DOMContentLoaded", function () {
+//     const elements = document.querySelectorAll(".reveal");
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-            } else {
-                entry.target.classList.remove("visible");
-            }
-        });
-    }, { threshold: 0.1 });
+//     const observer = new IntersectionObserver(entries => {
+//         entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//                 entry.target.classList.add("visible");
+//             } else {
+//                 entry.target.classList.remove("visible");
+//             }
+//         });
+//     }, { threshold: 0.1 });
 
-    elements.forEach(element => observer.observe(element));
-});
+//     elements.forEach(element => observer.observe(element));
+// });
 
 // document.addEventListener("DOMContentLoaded", function () {
 //     const circle_menu = document.querySelector(".naming button");
