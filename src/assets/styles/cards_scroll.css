@@ -46,6 +46,12 @@
     text-align: justify;
 }
 
+.price {
+    font-weight: bold;
+    color: #3E2522;
+    font-size: 1.1em;
+}
+
 .card input {
     display: none;
 }
