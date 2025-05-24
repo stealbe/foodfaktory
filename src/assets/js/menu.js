@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch('../../../../assets/php/resurces.php') // путь к твоему PHP-файлу
+    fetch('../../../../assets/php/resurces.php') // php source
         .then(response => response.json())
         .then(data => {
             const section = document.querySelector("section.menu");
             if (!section) return;
 
-            // Страницы меню
+            // Pages + cards
             const pages = data.menu_pages;
             const dishes = data.dishes.filter(d => d.filling_type === "menu");
 
