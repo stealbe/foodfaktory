@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch('full_menu_import.php') // путь к твоему PHP-файлу
+    fetch('../../../../assets/php/resurces.php') // путь к твоему PHP-файлу
         .then(response => response.json())
         .then(data => {
             const section = document.querySelector("section.menu");
