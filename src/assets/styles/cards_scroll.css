@@ -40,9 +40,8 @@
     padding: 0 20px;
 }
 
-.card_text>p:nth-of-type(2) {
+.card_text>.ingredients {
     text-align: justify;
-
 }
 
 .card input {
