@@ -1,4 +1,4 @@
-.menu:has([id^="card_"]:checked) {
+.menu:has([id*="card_"]:checked) {
     width: fit-content;
 }
 

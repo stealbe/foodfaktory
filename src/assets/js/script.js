@@ -246,75 +246,75 @@ document.addEventListener("DOMContentLoaded", function () {
 //     updateVisibility(); // Set the initial visibility of cards and navigation.
 // });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const pages = document.querySelectorAll("[class^='page_']");
-    const slideButtonsContainer = document.querySelector(".slide_buttons");
-    // const viewButtons = document.querySelectorAll(".bnt_View_more");
-    // const imgSelectButtons = document.querySelectorAll(".card_img_select"); // Кнопки выбора изображений
-    const firstButton = slideButtonsContainer?.querySelector("label");
-    const styleTag = document.createElement("style");
+// document.addEventListener("DOMContentLoaded", () => {
+//     const pages = document.querySelectorAll("[class^='page_']");
+//     const slideButtonsContainer = document.querySelector(".slide_buttons");
+//     // const viewButtons = document.querySelectorAll(".bnt_View_more");
+//     // const imgSelectButtons = document.querySelectorAll(".card_img_select"); // Кнопки выбора изображений
+//     const firstButton = slideButtonsContainer?.querySelector("label");
+//     const styleTag = document.createElement("style");
 
-    if (!firstButton || pages.length <= 1) {
-        if (slideButtonsContainer) slideButtonsContainer.style.display = "none";
-    } else {
-        slideButtonsContainer.innerHTML = "";
-        pages.forEach((page, index) => {
-            const newButton = firstButton.cloneNode(true);
-            const input = newButton.querySelector("input");
-            const span = newButton.querySelector("span");
-            if (input) {
-                input.value = `value-${index + 1}`;
-                input.id = `value-${index + 1}`;
-                input.checked = index === 0;
-                input.addEventListener("change", () => {
-                    console.log(`Переключено на страницу ${index + 1}`);
-                });
-            }
-            if (span) span.textContent = page.dataset.title;
-            newButton.style.flex = "1";
-            slideButtonsContainer.appendChild(newButton);
-        });
-        const selection = document.createElement("span");
-        selection.className = "selection";
-        slideButtonsContainer.appendChild(selection);
-        const selectionWidth = selection.offsetWidth;
-        let dynamicCSS = `.selection { width: ${selectionWidth}px; display: inline-block; }\n`;
-        pages.forEach((page, index) => {
-            const offsetPixels = index * selectionWidth;
-            dynamicCSS += `.slide_buttons label:nth-child(${index + 1
-                }):has(input:checked)~.selection { transform: translateX(calc(${offsetPixels}px)); }\n`;
-        });
-        styleTag.textContent = dynamicCSS;
-        document.head.appendChild(styleTag);
-    }
+//     if (!firstButton || pages.length <= 1) {
+//         if (slideButtonsContainer) slideButtonsContainer.style.display = "none";
+//     } else {
+//         slideButtonsContainer.innerHTML = "";
+//         pages.forEach((page, index) => {
+//             const newButton = firstButton.cloneNode(true);
+//             const input = newButton.querySelector("input");
+//             const span = newButton.querySelector("span");
+//             if (input) {
+//                 input.value = `value-${index + 1}`;
+//                 input.id = `value-${index + 1}`;
+//                 input.checked = index === 0;
+//                 input.addEventListener("change", () => {
+//                     console.log(`Переключено на страницу ${index + 1}`);
+//                 });
+//             }
+//             if (span) span.textContent = page.dataset.title;
+//             newButton.style.flex = "1";
+//             slideButtonsContainer.appendChild(newButton);
+//         });
+//         const selection = document.createElement("span");
+//         selection.className = "selection";
+//         slideButtonsContainer.appendChild(selection);
+//         const selectionWidth = selection.offsetWidth;
+//         let dynamicCSS = `.selection { width: ${selectionWidth}px; display: inline-block; }\n`;
+//         pages.forEach((page, index) => {
+//             const offsetPixels = index * selectionWidth;
+//             dynamicCSS += `.slide_buttons label:nth-child(${index + 1
+//                 }):has(input:checked)~.selection { transform: translateX(calc(${offsetPixels}px)); }\n`;
+//         });
+//         styleTag.textContent = dynamicCSS;
+//         document.head.appendChild(styleTag);
+//     }
 
-    // // Обработчики для кнопок выбора изображений
-    // imgSelectButtons.forEach((button) => {
-    //     button.addEventListener("click", function () {
-    //         const activeCard = this.closest(".card");
-    //         const mainImage = activeCard.querySelector("#card_main_img");
-    //         const selectedImage = this.querySelector("img").src;
-    //         if (mainImage && selectedImage) {
-    //             mainImage.src = selectedImage;
-    //         }
-    //     });
-    // });
+//     // // Обработчики для кнопок выбора изображений
+//     // imgSelectButtons.forEach((button) => {
+//     //     button.addEventListener("click", function () {
+//     //         const activeCard = this.closest(".card");
+//     //         const mainImage = activeCard.querySelector("#card_main_img");
+//     //         const selectedImage = this.querySelector("img").src;
+//     //         if (mainImage && selectedImage) {
+//     //             mainImage.src = selectedImage;
+//     //         }
+//     //     });
+//     // });
 
-    window.addEventListener("load", () => {
-        // Получаем параметры из URL
-        const params = new URLSearchParams(window.location.search);
-        const selectedCardId = params.get("card"); // например, "card_1"
+//     window.addEventListener("load", () => {
+//         // Получаем параметры из URL
+//         const params = new URLSearchParams(window.location.search);
+//         const selectedCardId = params.get("card"); // например, "card_1"
 
-        if (selectedCardId) {
-            const radioButton = document.getElementById(selectedCardId);
-            if (radioButton) {
-                radioButton.checked = true;
-            } else {
-                console.log(`Радиокнопка с ID ${selectedCardId} не найдена на этой странице.`);
-            }
-        }
-    });
-});
+//         if (selectedCardId) {
+//             const radioButton = document.getElementById(selectedCardId);
+//             if (radioButton) {
+//                 radioButton.checked = true;
+//             } else {
+//                 console.log(`Радиокнопка с ID ${selectedCardId} не найдена на этой странице.`);
+//             }
+//         }
+//     });
+// });
 //------------------------------------------------------------
 
 // document.addEventListener("DOMContentLoaded", function () {

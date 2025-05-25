@@ -39,6 +39,17 @@ if ($action === 'full_menu') {
     $stmt = $pdo->query('SELECT id, name, price, ingredients, description, weight, page_id, image1, image2, image3, image4 FROM dishes ORDER BY id');
     $dishes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+    // Убираем дубликаты блюд по 'id'
+    $uniqueDishes = [];
+    $seenIds = [];
+    foreach ($dishes as $dish) {
+        if (!in_array($dish['id'], $seenIds)) {
+            $seenIds[] = $dish['id'];
+            $uniqueDishes[] = $dish;
+        }
+    }
+    $dishes = $uniqueDishes;
+
     $json = json_encode(['pages' => $pages, 'dishes' => $dishes]);
     cacheSet($cacheFile, $json);
 
@@ -52,7 +63,7 @@ if ($action === 'get_sets') {
 
     $sets = [];
 
-     // id and name of the dish
+    // id and name of the dish
     if ($result && $result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             $set_id = $row['id'];
@@ -82,7 +93,6 @@ if ($action === 'get_sets') {
     echo json_encode(['sets' => $sets]);
     exit;
 }
-
 
 if ($action === 'get_bakery') {
     $stmt = $pdo->prepare("SELECT 

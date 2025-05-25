@@ -6,7 +6,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-content: space-evenly;
+    align-items: center;
     flex-wrap: nowrap;
 }
 
@@ -130,8 +130,8 @@ label[for="left_nav_burger"] {
     border-radius: 25px;
     background: #FFE0B2;
     width: 80%;
-    align-items: space-around;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
     padding-top: 15px;
     padding-bottom: 15px;
     gap: 24px;
@@ -174,6 +174,9 @@ div[class^="page_"]:has([id^="card_"]:checked) {
 
 [class*="page_"] {
     display: none;
+    width: 100%;
+    align-items: space-evenly;
+    justify-content: space-evenly;
 }
 
 main:has(input[id="value-1"]:checked) .page_1,
@@ -185,16 +188,13 @@ main:has(input[id="value-6"]:checked) .page_6,
 main:has(input[id="value-7"]:checked) .page_7,
 main:has(input[id="value-8"]:checked) .page_8 {
     display: flex;
-    width: 100%;
-    align-items: space-evenly;
-    justify-content: space-evenly;
 }
 
-[class^="page_"]>div {
+/* [class^="page_"]>div {
     display: flex;
     justify-content: space-evenly;
     align-content: space-evenly;
-}
+} */
 
 /* ----------------slide_bar------------------ */
 .lowbar {
@@ -239,7 +239,7 @@ main:has(input[id="value-8"]:checked) .page_8 {
 }
 
 .selection {
-    display: none;
+    display: inline-block;
     position: absolute;
     height: 100%;
     z-index: 0;
@@ -247,15 +247,11 @@ main:has(input[id="value-8"]:checked) .page_8 {
     top: 0;
     transition: .15s ease;
     width: calc(var(--container_width) / var(--slide_count, 8));
+    background-color: #3E2522;
 }
 
 .slide_buttons label:has(input:checked) {
     color: #fff;
-}
-
-.slide_buttons label:has(input:checked)~.selection {
-    background-color: #3E2522;
-    display: inline-block;
 }
 
 .slide_buttons {
