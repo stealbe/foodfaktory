@@ -51,7 +51,7 @@ if ($action === 'get_sets') {
     $result = $conn->query($query);
 
     $sets = [];
-    
+
      // id and name of the dish
     if ($result && $result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
@@ -85,7 +85,24 @@ if ($action === 'get_sets') {
 
 
 if ($action === 'get_bakery') {
+    $stmt = $pdo->prepare("SELECT 
+        id, name, weight, price, ingredients, description, image1, image2, image3, image4 
+        FROM backery ORDER BY id");
 
+    if ($stmt->execute()) {
+        $bakeryItems = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        header('Content-Type: application/json');
+        echo json_encode([
+            'bakery' => $bakeryItems
+        ]);
+        exit;
+    } else {
+        // Error handling
+        header('HTTP/1.1 500 Internal Server Error');
+        echo json_encode(['error' => 'Ошибка получения данных из таблицы backery']);
+        exit;
+    }
 }
 
 if ($action === 'get_daily') {
