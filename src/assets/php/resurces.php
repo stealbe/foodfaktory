@@ -46,4 +46,50 @@ if ($action === 'full_menu') {
     exit;
 }
 
+if ($action === 'get_sets') {
+    $query = "SELECT * FROM sets";
+    $result = $conn->query($query);
+
+    $sets = [];
+    
+     // id and name of the dish
+    if ($result && $result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $set_id = $row['id'];
+
+            $dishes_query = "
+                SELECT d.id, d.name
+                FROM set_dishes sd
+                JOIN dishes d ON sd.dish_id = d.id
+                WHERE sd.set_id = $set_id
+            ";
+
+            $dishes_result = $conn->query($dishes_query);
+            $dishes = [];
+
+            if ($dishes_result && $dishes_result->num_rows > 0) {
+                while ($dish_row = $dishes_result->fetch_assoc()) {
+                    $dishes[] = $dish_row;
+                }
+            }
+
+            // Add dishes to the set row
+            $row['dishes'] = $dishes;
+            $sets[] = $row;
+        }
+    }
+
+    echo json_encode(['sets' => $sets]);
+    exit;
+}
+
+
+if ($action === 'get_bakery') {
+
+}
+
+if ($action === 'get_daily') {
+
+}
+
 echo json_encode(['error' => 'Unknown action']);
