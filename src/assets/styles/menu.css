@@ -246,7 +246,7 @@ main:has(input[id="value-8"]:checked) .page_8 {
     left: 0;
     top: 0;
     transition: .15s ease;
-    width: calc(var(--container_width) / 8);
+    width: calc(var(--container_width) / var(--slide_count, 8));
 }
 
 .slide_buttons label:has(input:checked) {

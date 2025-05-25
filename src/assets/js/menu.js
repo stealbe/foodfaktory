@@ -95,7 +95,7 @@ async function loadFullMenu() {
                     <div>${mainImg}${extraImgs}</div>
                     <div class="card_text">
                         <h3>${dish.name}</h3>
-                        <p class="gramm">${dish.weight || ''}</p>
+                        <p class="gramm">${dish.weight || ''}g</p>
                         <p class="price">${dish.price} zł</p>
                         <p class="ingredients">${ingredientsText}</p>
                     </div>
@@ -124,8 +124,9 @@ async function loadFullMenu() {
             slideButtonsContainer.appendChild(selection);
         }
 
+        selection.style.setProperty('--slide_count', pages.length);
+
         const firstLabelWidth = slideButtonsContainer.querySelector('label').offsetWidth;
-        selection.style.width = `${firstLabelWidth}px`;
         selection.style.transform = `translateX(0px)`;
 
         const radios = slideButtonsContainer.querySelectorAll('input[name="value-radio"]');
