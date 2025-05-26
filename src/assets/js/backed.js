@@ -69,10 +69,10 @@ async function loadBakeryMenu() {
           <label for="backed_card_${item.id}" class="card_btn">
             <a class="back_btn" href="./backed.html?page=${currentPage}">← Back</a>
             <div>
-              <img id="card_main_img" src="${item.image1 || ''}" alt="${item.name} фото" />
-              ${item.image2 ? `<button class="card_img_select" id="card_img_1"><img src="${item.image2}" alt="${item.name} фото"></button>` : ''}
-              ${item.image3 ? `<button class="card_img_select" id="card_img_2"><img src="${item.image3}" alt="${item.name} фото"></button>` : ''}
-              ${item.image4 ? `<button class="card_img_select" id="card_img_3"><img src="${item.image4}" alt="${item.name} фото"></button>` : ''}
+              <img id="card_main_img" src="${item.image1 || ''}" alt="${item.name} zdjęcie" />
+              ${item.image2 ? `<button class="card_img_select" id="card_img_1"><img src="${item.image2}" alt="${item.name} zdjęcie"></button>` : ''}
+              ${item.image3 ? `<button class="card_img_select" id="card_img_2"><img src="${item.image3}" alt="${item.name} zdjęcie"></button>` : ''}
+              ${item.image4 ? `<button class="card_img_select" id="card_img_3"><img src="${item.image4}" alt="${item.name} zdjęcie"></button>` : ''}
             </div>
             <div class="card_text">
               <h3>${item.name}</h3>

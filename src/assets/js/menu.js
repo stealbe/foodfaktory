@@ -176,14 +176,14 @@ async function loadFullMenu() {
 
         // Рендерим блюда для выбранной страницы или для всех страниц (если страница не выбрана)
         dishesToShow.forEach(dish => {
-            const mainImg = `<img id="card_main_img" src="${dish.image1}" alt="${dish.name} изображение">`;
+            const mainImg = `<img id="card_main_img" src="${dish.image1}" alt="${dish.name} zdjęcie">`;
 
             let extraImgs = '';
             if (dish.image2 || dish.image3 || dish.image4) {
                 extraImgs += '<div class="img_scroll">';
-                if (dish.image2) extraImgs += `<button class="card_img_select" id="card_img_1"><img src="${dish.image2}" alt="${dish.name} изображение"></button>`;
-                if (dish.image3) extraImgs += `<button class="card_img_select" id="card_img_2"><img src="${dish.image3}" alt="${dish.name} изображение"></button>`;
-                if (dish.image4) extraImgs += `<button class="card_img_select" id="card_img_3"><img src="${dish.image4}" alt="${dish.name} изображение"></button>`;
+                if (dish.image2) extraImgs += `<button class="card_img_select" id="card_img_1"><img src="${dish.image2}" alt="${dish.name} zdjęcie"></button>`;
+                if (dish.image3) extraImgs += `<button class="card_img_select" id="card_img_2"><img src="${dish.image3}" alt="${dish.name} zdjęcie"></button>`;
+                if (dish.image4) extraImgs += `<button class="card_img_select" id="card_img_3"><img src="${dish.image4}" alt="${dish.name} zdjęcie"></button>`;
                 extraImgs += '</div>';
             }
 

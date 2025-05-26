@@ -122,7 +122,50 @@ if ($action === 'get_bakery') {
 }
 
 if ($action === 'get_daily') {
+    $cacheFile = $cacheDir . '/daily.json';
 
+    $cached = cacheGet($cacheFile, $cacheTime);
+    if ($cached !== false) {
+        echo $cached;
+        exit;
+    }
+
+    $daily = [];
+
+    // Получаем блюда
+    $stmt = $pdo->query("
+        SELECT d.id, d.name, d.description, d.price, d.image1
+        FROM daily da
+        JOIN dishes d ON da.dish_id = d.id
+        WHERE da.dish_id IS NOT NULL
+    ");
+    $dishes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($dishes as $dish) {
+        $dish['dish_id'] = $dish['id'];
+        $dish['set_id'] = null;
+        $daily[] = $dish;
+    }
+
+    // Получаем сеты
+    $stmt = $pdo->query("
+        SELECT s.id, s.name, s.description, s.price, s.image1
+        FROM daily da
+        JOIN sets s ON da.set_id = s.id
+        WHERE da.set_id IS NOT NULL
+    ");
+    $sets = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($sets as $set) {
+        $set['dish_id'] = null;
+        $set['set_id'] = $set['id'];
+        $daily[] = $set;
+    }
+
+    $json = json_encode(['daily' => $daily]);
+    cacheSet($cacheFile, $json);
+
+    echo $json;
+    exit;
 }
+
 
 echo json_encode(['error' => 'Unknown action']);
