@@ -42,6 +42,15 @@
     padding: 0 20px;
 }
 
+.card li>a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.card ul {
+    line-height: 32px;
+}
+
 .card_text>.ingredients {
     text-align: justify;
 }

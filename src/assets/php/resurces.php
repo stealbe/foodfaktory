@@ -58,38 +58,44 @@ if ($action === 'full_menu') {
 }
 
 if ($action === 'get_sets') {
-    $query = "SELECT * FROM sets";
-    $result = $conn->query($query);
+    $stmt = $pdo->query("SELECT * FROM sets");
+    $sets = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    $sets = [];
+    foreach ($sets as &$row) {
+        $set_id = $row['id'];
 
-    // id and name of the dish
-    if ($result && $result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            $set_id = $row['id'];
+        // 1. Dishes
+        $stmtDishes = $pdo->prepare("
+            SELECT d.id, d.name
+            FROM set_dishes sd
+            JOIN dishes d ON sd.dish_id = d.id
+            WHERE sd.set_id = ?
+        ");
+        $stmtDishes->execute([$set_id]);
+        $row['dishes'] = $stmtDishes->fetchAll(PDO::FETCH_ASSOC);
 
-            $dishes_query = "
-                SELECT d.id, d.name
-                FROM set_dishes sd
-                JOIN dishes d ON sd.dish_id = d.id
-                WHERE sd.set_id = $set_id
-            ";
+        // 2. Backery (через таблицу set_backery)
+        $stmtBackery = $pdo->prepare("
+            SELECT b.id, b.name
+            FROM set_backery sb
+            JOIN backery b ON sb.backery_id = b.id
+            WHERE sb.set_id = ?
+        ");
+        $stmtBackery->execute([$set_id]);
+        $row['backery'] = $stmtBackery->fetchAll(PDO::FETCH_ASSOC);
 
-            $dishes_result = $conn->query($dishes_query);
-            $dishes = [];
-
-            if ($dishes_result && $dishes_result->num_rows > 0) {
-                while ($dish_row = $dishes_result->fetch_assoc()) {
-                    $dishes[] = $dish_row;
-                }
-            }
-
-            // Add dishes to the set row
-            $row['dishes'] = $dishes;
-            $sets[] = $row;
-        }
+        // 3. Text ingredients (через таблицу set_ingredients)
+        $stmtText = $pdo->prepare("
+            SELECT ingredient_text 
+            FROM set_ingredients 
+            WHERE set_id = ?
+        ");
+        $stmtText->execute([$set_id]);
+        $textIngredients = $stmtText->fetchAll(PDO::FETCH_COLUMN);
+        $row['ingredient_text'] = $textIngredients;
     }
 
+    header('Content-Type: application/json');
     echo json_encode(['sets' => $sets]);
     exit;
 }
