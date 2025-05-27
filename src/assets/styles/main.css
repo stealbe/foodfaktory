@@ -162,6 +162,20 @@ main h2 {
     margin: 15px;
 }
 
+.card_text>.descrip {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    text-align: justify;
+}
+
+.card_text .price {
+    font-weight: bold;
+    color: #3E2522;
+    font-size: 1.1em;
+}
+
 .btn_panel {
     display: flex;
     flex-wrap: nowrap;
@@ -223,7 +237,6 @@ main h2 {
     font-weight: bold;
     text-decoration: none;
     color: #3E2522;
-    white-space: nowrap;
     min-width: 120px;
     text-align: center;
     flex-shrink: 0;

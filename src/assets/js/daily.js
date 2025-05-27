@@ -42,7 +42,7 @@ async function loadDaily() {
                     <img src="${image}" alt="${altText}">
                     <div class="card_text">
                         <h3>${name}</h3>
-                        <p>${description}</p>
+                        <p class="descrip">${description}</p>
                         <p class="price">${price} zł</p>
                         <p class="bnt_View_more">View</p>
                     </div>
