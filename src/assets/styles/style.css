@@ -201,7 +201,7 @@ main:has([id*="card_"]:checked) .left_nav {
 
 /* --------------------------------------- */
 
-@media(min-width:1205px) {
+@media(min-width:1450px) {
 
     nav>ul>:nth-child(1):hover a,
     nav>ul>:nth-child(2):hover a,
