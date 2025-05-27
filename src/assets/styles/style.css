@@ -70,16 +70,13 @@ li {
     list-style-type: none;
 }
 
-nav li:nth-of-type(11) a {
-    padding: 5px;
-    width: 200px;
+nav a[href^="tel:"] {
+    max-width: 200px;
     font-weight: bold;
+    font-size: 20px;
 }
 
-nav>ul>:nth-child(7),
-nav>ul>:nth-child(8),
-nav>ul>:nth-child(9),
-nav>ul>:nth-child(10) {
+nav li:has(.socialContainer) {
     padding: 3px;
     list-style-type: none;
     background: #d3a376d2;
@@ -87,13 +84,8 @@ nav>ul>:nth-child(10) {
 }
 
 nav>ul>:nth-child(6) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    list-style-type: none;
     background: rgb(211, 144, 20);
     padding: 10px;
-    text-align: center;
     border-radius: 20px;
 }
 
@@ -107,10 +99,6 @@ nav a {
     display: flex;
     justify-content: center;
     font-size: 25px;
-}
-
-nav a[href^="tel:"] {
-    font-size: 20px;
 }
 
 
@@ -190,11 +178,6 @@ main:has([id*="card_"]:checked) .left_nav {
     border-radius: 100%;
 }
 
-.socialSvg {
-    width: 42px;
-    height: 42px;
-}
-
 .socialSvg path {
     fill: #8C6E63;
     stroke: none;
@@ -227,13 +210,6 @@ main:has([id*="card_"]:checked) .left_nav {
     nav>ul>:nth-child(5):hover a {
         transform: translateY(-5px);
         transition: 0.25s ease-in-out;
-    }
-
-    nav>ul>:nth-child(1)>:hover a,
-    nav>ul>:nth-child(2)>:hover a,
-    nav>ul>:nth-child(3)>:hover a,
-    nav>ul>:nth-child(4)>:hover a,
-    nav>ul>:nth-child(5)>:hover a {
         font-size: 30px;
     }
 
@@ -248,28 +224,21 @@ main:has([id*="card_"]:checked) .left_nav {
         font-size: 30px;
     }
 
-    nav>ul>:nth-child(7):hover a {
+    nav li:hover a:has(.phoneSvg) {
         border: 6.5px double rgba(255, 0, 0, 0);
         background-image: linear-gradient(to right top, greenyellow 15%, yellow 75%);
         color: var(whitesmoke);
         transition: 0.35s ease-in-out;
     }
 
-    nav>ul>:nth-child(8):hover a {
+    nav li:hover a:has(.FacebookSVG) {
         border: 6.5px double rgba(255, 0, 0, 0);
-        background-image: linear-gradient(to left bottom, rgb(77, 98, 211), rgb(121, 60, 180), rgb(175, 52, 142), rgb(224, 94, 80), rgb(254, 209, 110));
+        background-image: linear-gradient(to right top, rgb(77, 98, 211) 45%, rgb(47, 154, 255) 75%);
         color: var(whitesmoke);
         transition: 0.35s ease-in-out;
     }
 
-    nav>ul>:nth-child(9):hover a {
-        border: 6.5px double rgba(255, 0, 0, 0);
-        background-image: linear-gradient(to right top, rgb(47, 154, 255) 15%, rgb(151, 185, 216) 75%);
-        color: var(whitesmoke);
-        transition: 0.35s ease-in-out;
-    }
-
-    nav>ul>:nth-child(10):hover a {
+    nav li:hover a:has(.MailSVG) {
         border: 6.5px double rgba(255, 0, 0, 0);
         background-image: linear-gradient(to right top, rgb(236, 179, 21) 15%, rgb(233, 70, 6) 75%);
         color: var(whitesmoke);
@@ -287,21 +256,14 @@ main:has([id*="card_"]:checked) .left_nav {
         height: 44px;
     }
 
-    nav>ul>:nth-child(7):hover .socialSvg path,
-    nav>ul>:nth-child(8):hover .socialSvg path,
-    nav>ul>:nth-child(9):hover .socialSvg path {
+    nav li:hover .socialSvg path {
         fill: rgb(255, 255, 255);
-    }
-
-    nav>ul>:nth-child(10):hover .socialSvg path {
-        stroke: rgb(255, 255, 255);
-    }
-
-    nav>ul>:nth-child(7):hover svg,
-    nav>ul>:nth-child(8):hover svg,
-    nav>ul>:nth-child(9):hover svg,
-    nav>ul>:nth-child(10):hover svg {
         animation: slide-in-top 0.3s both;
+    }
+
+    nav li:hover .MailSVG path {
+        stroke: rgb(255, 255, 255);
+        fill: none;
     }
 
     body {
@@ -315,9 +277,8 @@ main:has([id*="card_"]:checked) .left_nav {
         justify-content: center;
         align-content: center;
         position: fixed;
-        top: 70px;
-        right: -15px;
-        margin: 10px;
+        top: auto;
+        right: 0;
         background-color: #FFF2DF;
         width: 70px;
         height: 50px;

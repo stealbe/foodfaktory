@@ -63,6 +63,51 @@ document.addEventListener("DOMContentLoaded", function () {
     header.addEventListener("mouseleave", handleMouseLeave);
 });
 //------------------------------------------------------------
+// Header / Footer load ---------------------------
+
+const cache = {};
+
+function loadSection(section, targetSelector) {
+    const filename = `${section}.html`;
+    const currentPage = window.location.pathname.split('/').pop();
+
+    let path;
+    if (currentPage === 'index.html' || currentPage === '') {
+        path = `./scr/assets/sections/${filename}`;
+    } else {
+        path = `../sections/${filename}`;
+    }
+
+    fetch(path, { method: 'HEAD' })
+        .then(headResp => {
+            if (!headResp.ok) throw new Error(`Не удалось проверить ${section}`);
+
+            const lastModified = headResp.headers.get('Last-Modified');
+            if (cache[section] && cache[section].lastModified === lastModified) {
+                // Кеш актуален, вставляем из кеша
+                document.querySelector(targetSelector).innerHTML = cache[section].content;
+                return;
+            }
+
+            // Если кеша нет или файл обновился — загружаем новый контент
+            fetch(path)
+                .then(resp => {
+                    if (!resp.ok) throw new Error(`Не удалось загрузить ${section}`);
+                    return resp.text();
+                })
+                .then(html => {
+                    cache[section] = { lastModified, content: html };
+                    document.querySelector(targetSelector).innerHTML = html;
+                });
+        })
+        .catch(e => console.error(e));
+}
+
+loadSection('header', 'header');
+loadSection('footer', 'footer');
+
+
+//------------------------------------------------------------
 // !!!! Cards and Pages logics !!!!
 // document.addEventListener("DOMContentLoaded", () => {
 //     const pages = document.querySelectorAll("[class^='page_']"); // Collection of all page sections.
