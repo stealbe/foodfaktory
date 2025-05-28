@@ -84,7 +84,7 @@ main h2 {
     height: 110dvh;
     min-height: 100%;
     overflow: hidden;
-    background-image: linear-gradient(225deg, #FFF2DF, rgba(255, 255, 255, 0)), url(../images/naming_img.jpg);
+    background-image: linear-gradient(225deg, #FFF2DF, rgba(255, 255, 255, 0)), url(../images/naming_img.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

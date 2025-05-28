@@ -2,7 +2,7 @@ let cachedSets = null;
 
 async function loadSets() {
     try {
-        const container = document.querySelector('div.menu');
+        const container = document.querySelector('section.menu');
         if (!container) return;
 
         const urlParams = new URLSearchParams(window.location.search);

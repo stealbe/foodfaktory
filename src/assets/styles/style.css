@@ -10,7 +10,7 @@ body {
     flex-direction: column;
     justify-content: center;
     background: #FFE0B2;
-    background-image: url(../images/wood_backg.jpg);
+    background-image: url(../images/wood_backg.webp);
     border-image: fill 0 linear-gradient(#FFF2DF, #fff2df7a, #fff2df00, #2c2720b9 100%);
     overflow-x: hidden;
     min-height: 100vh;
