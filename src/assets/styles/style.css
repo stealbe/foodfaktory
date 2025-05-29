@@ -11,6 +11,8 @@ body {
     justify-content: center;
     background: #FFE0B2;
     background-image: url(../images/wood_backg.webp);
+    background-position: center center;
+    background-size: 100%;
     border-image: fill 0 linear-gradient(#FFF2DF, #fff2df7a, #fff2df00, #2c2720b9 100%);
     overflow-x: hidden;
     min-height: 100vh;
@@ -70,8 +72,66 @@ li {
     list-style-type: none;
 }
 
+label[for="cart"] {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: max-content;
+    align-items: center;
+    color: whitesmoke;
+}
+
+label[for="cart"] input {
+    display: none;
+}
+
+label[for="cart"] svg {
+    width: 34px;
+    height: 34px;
+    stroke: #FFFFFF;
+}
+
+object[data*="cart.html"] {
+    display: block;
+    width: inherit;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(#FFE0B2 0 0 12px);
+    margin: 0 auto;
+    overscroll-behavior: contain;
+}
+
+div:has(object[data*="cart.html"]) {
+    display: none;
+    position: fixed;
+    top: -20px;
+    left: 0;
+    z-index: 999999999;
+    width: 100%;
+    height: 100vh;
+    background: #00000080;
+    padding-top: 100px;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+div:has(object[data*="cart.html"]) a {
+    background: rgb(211, 144, 20);
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+body:has(#cart:checked) div:has(object[data*="cart.html"]) {
+    display: flex;
+}
+
 nav a[href^="tel:"] {
-    max-width: 200px;
     font-weight: bold;
     font-size: 20px;
 }
@@ -83,17 +143,14 @@ nav li:has(.socialContainer) {
     border-radius: 35px;
 }
 
-nav>ul>:nth-child(6) {
+#cart_link {
     background: rgb(211, 144, 20);
     padding: 10px;
     border-radius: 20px;
 }
 
-nav>ul>:nth-child(6)>a {
-    color: whitesmoke;
-}
-
-nav a {
+nav a,
+nav label {
     text-decoration: none;
     color: black;
     display: flex;
@@ -115,10 +172,14 @@ p {
 }
 
 main {
-    display: inline;
+    display: flex;
     justify-items: center;
     align-content: space-around;
     width: 100%;
+}
+
+main>* {
+    margin: 20px 0;
 }
 
 .menu {
@@ -201,7 +262,7 @@ main:has([id*="card_"]:checked) .left_nav {
 
 /* --------------------------------------- */
 
-@media(min-width:1450px) {
+@media(min-width:1080px) {
 
     nav>ul>:nth-child(1):hover a,
     nav>ul>:nth-child(2):hover a,
@@ -213,14 +274,14 @@ main:has([id*="card_"]:checked) .left_nav {
         font-size: 30px;
     }
 
-    nav>ul>:nth-child(6):hover {
+    #cart_link:hover {
         border-radius: 35px;
         padding: 15px;
         background: rgb(238, 208, 144);
         transition: 0.25s ease-in-out;
     }
 
-    nav>ul>:nth-child(6):hover a {
+    #cart_link:hover a {
         font-size: 30px;
     }
 
@@ -271,7 +332,17 @@ main:has([id*="card_"]:checked) .left_nav {
     }
 }
 
-@media(max-width:1205px) {
+@media(max-width:1295px) {
+    label[for="cart"] p {
+        display: none;
+    }
+
+    #second_ph {
+        display: none;
+    }
+}
+
+@media(max-width:1080px) {
     .burger_secv {
         display: flex;
         justify-content: center;
@@ -363,16 +434,6 @@ main:has([id*="card_"]:checked) .left_nav {
         top: 170px;
         left: 0;
         overflow: scroll;
-    }
-
-    nav ul li:nth-of-type(1),
-    nav ul li:nth-of-type(2),
-    nav ul li:nth-of-type(3),
-    nav ul li:nth-of-type(4),
-    nav ul li:nth-of-type(5) {
-        width: 100%;
-        justify-content: center;
-        border-radius: 0;
     }
 
     nav ul li {

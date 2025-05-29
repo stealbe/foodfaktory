@@ -1,0 +1,146 @@
+@import url(./normalize.css);
+@import url(./cart_sect.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+body {
+    max-width: 1000px;
+    width: 100%;
+    margin: auto auto;
+}
+
+a[href="./order.html"] {
+    background: rgb(211, 144, 20);
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+a[href="./order.html"]:hover {
+    filter: brightness(1.1);
+}
+
+a[href="./order.html"]:hover p {
+    filter: blur(0.65px) brightness(20);
+}
+
+.cart {
+    display: flex;
+    margin: 15px auto 15px auto;
+    border-radius: 25px;
+    background: #FFE0B2;
+    width: 100%;
+    max-width: 1000px;
+    align-content: space-around;
+    justify-content: space-around;
+    height: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    gap: 24px;
+    padding: 40px 20px;
+}
+
+.cart_positions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+}
+
+.cart_item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    max-width: 800px;
+    width: 100%;
+    gap: 48px;
+    border: #3E2522 1px solid;
+    padding: 24px 32px;
+    border-radius: 24px;
+}
+
+.cart_item>div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 70%;
+}
+
+.item_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.item_name {
+    text-decoration: none;
+    color: #3E2522;
+    font-size: 1.25em;
+}
+
+.item_price,
+.price_style {
+    font-weight: bold;
+    color: #3E2522;
+    font-size: 1.25em;
+}
+
+.cart_item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.item_contorls {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.item_contorls button {
+    background: none;
+    border: #FFFFFF 1px solid;
+    border-radius: 8%;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-weight: 900;
+    text-align: center;
+}
+
+.item_count {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+}
+
+.item_contorls span {
+    color: #3E2522;
+    font-size: 26px;
+}
+
+.item_contorls button svg {
+    width: 100%;
+    height: 100%;
+    stroke: #FFFFFF;
+    stroke-width: 1.6px;
+}
