@@ -63,7 +63,6 @@ async function loadBakeryMenu() {
                         <p class="price">${item.price ? `${item.price} zł` : ''}</p>
                         <p class="ingredients">${item.ingredients ? item.ingredients.split(',').map(i => i.trim()).join(', ') : ''}</p>
                       </div>
-                      <button class="bnt_addTo_cart">Add to cart</button>
                       <div class="full_text">
                         <h3>${item.name}</h3>
                         <p class="gramm">${item.weight ? `${item.weight}g` : ''}</p>
@@ -75,6 +74,7 @@ async function loadBakeryMenu() {
                         <h4>Offer</h4>
                         <p>${item.description || ''}</p>
                       </div>
+                      <button class="bnt_addTo_cart">Add to cart</button>
                     </label>
                   </div>
                 `;

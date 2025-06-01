@@ -112,6 +112,15 @@
         </nav>
     </header>
     <main>
+        <section class="cart">
+            <h2>Koszyk</h2>
+            <div class="cart_positions">
+            </div>
+            <div>
+                <span class="total_label price_style">Łączna kwota:</span>
+                <span class="total_amount price_style">85.00 zł</span>
+            </div>
+        </section>
         <div><a href="./order.html"><svg viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" data-darkreader-inline-fill=""
                     style="--darkreader-inline-fill: var(--darkreader-background-000000, #000000);">
@@ -327,14 +336,14 @@
                 <div id="time_change">
                     <p>Preferowany czas dostawy</p>
                     <label for="now">
-                        <input type="radio" name="time" id="now" checked>
-                        <p>Jak najszybciej</p>
+                        <input type="radio" name="time" value="now" id="now" checked>
+                        Jak najszybciej
                     </label>
                     <label for="spec_time">
-                        <input type="radio" name="time" id="spec_time">
+                        <input type="radio" name="time" value="specific" id="spec_time">
                         <div class="form_group">
-                            <input type="time" id="delivery_time" name="delivery_time"
-                                placeholder="Preferowany czas dostawy" required>
+                            <input type="time" id="delivery_time" value="00:00" name="delivery_time"
+                                placeholder="Preferowany czas dostawy" disabled>
                         </div>
                     </label>
                 </div>
@@ -416,5 +425,7 @@
         </section>
     </footer>
 </body>
+<script src="../js/order.js"></script>
+<script src="../js/cart.js"></script>
 
 </html>

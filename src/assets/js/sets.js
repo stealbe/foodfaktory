@@ -87,7 +87,6 @@ async function loadSets() {
                         <p class="price">${set.price} zł</p>
                         <p>${ingredientsText}</p>
                     </div>
-                    <button class="bnt_addTo_cart">Add to cart</button>
                     <div class="full_text">
                         <h3>${set.name}</h3>
                         <p class="price">${set.price} zł</p>
@@ -96,6 +95,7 @@ async function loadSets() {
                         <h4>Offer</h4>
                         <p>${safe(set.description)}</p>
                     </div>
+                    <button class="bnt_addTo_cart">Add to cart</button>
                 </label>
             </div>
             `;

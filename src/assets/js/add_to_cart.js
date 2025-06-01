@@ -21,11 +21,9 @@ function addToCart(itemId, itemType = 'dish') {
         // Сохраняем обновленную корзину в localStorage
         localStorage.setItem('cart', JSON.stringify(cart));
 
-        console.log(`Товар ${itemType} с ID ${itemId} добавлен в корзину. Количество: ${cart[itemKey].quantity}`);
-
         return true;
     } catch (error) {
-        console.error('Ошибка при добавлении в корзину:', error);
+        console.error('Błąd podczas dodawania do koszyka:', error);
         return false;
     }
 }

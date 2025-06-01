@@ -159,7 +159,13 @@
 }
 
 [id*="card_"]:checked+.card_btn .bnt_addTo_cart {
-    display: none;
+    max-width: 250px;
+    margin: 0 40px 0 auto;
+}
+
+.bnt_addTo_cart:active {
+    transition: 0.3s ease;
+    transform: scale(0.95) translateY(5px);
 }
 
 [id*="card_"]:checked+.card_btn .back_btn {

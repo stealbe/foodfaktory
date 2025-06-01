@@ -1,8 +1,11 @@
 @import url(./normalize.css);
 @import url(./style.css);
+@import url(./cart_sect.css);
 
 body {
     background-image: none;
+    max-width: none;
+    margin: none;
 }
 
 main>section {
@@ -20,6 +23,10 @@ main>section {
     width: 100%;
 }
 
+main:has(.success_message) .item_contorls {
+    display: none;
+}
+
 .order_form {
     width: 100%;
     display: flex;
@@ -31,7 +38,7 @@ main>section {
 }
 
 #time_change {
-    width: 100%;
+    width: 90%;
     max-width: 520px;
     color: #3E2522;
     font-weight: bold;
@@ -41,18 +48,18 @@ main>section {
     display: flex;
     flex-wrap: nowrap;
     gap: 8px;
-    justify-content: space-between;
     align-items: center;
-}
-
-#time_change>label p {
     width: 100%;
     max-width: 520px;
 }
 
 #time_change>label>input {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
+}
+
+#time_change>label>.form_group {
+    max-width: 482px;
 }
 
 #spec_time~div {
@@ -64,7 +71,7 @@ main>section {
 }
 
 .order_form>p {
-    width: 100%;
+    width: 90%;
     max-width: 520px;
 }
 
@@ -72,7 +79,7 @@ main>section {
     border: #8C6E63 2px solid;
     border-radius: 16px;
     position: relative;
-    width: 100%;
+    width: 90%;
     max-width: 520px;
 }
 
