@@ -1,6 +1,10 @@
 @import url(./normalize.css);
 @import url(./style.css);
 
+body {
+    background-image: none;
+}
+
 main>section {
     display: flex;
     flex-direction: column;
@@ -14,4 +18,113 @@ main>section {
     align-items: center;
     justify-content: center;
     width: 100%;
+}
+
+.order_form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: nowrap;
+}
+
+#time_change {
+    width: 100%;
+    max-width: 520px;
+    color: #3E2522;
+    font-weight: bold;
+}
+
+#time_change>label {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#time_change>label p {
+    width: 100%;
+    max-width: 520px;
+}
+
+#time_change>label>input {
+    width: 32px;
+    height: 32px;
+}
+
+#spec_time~div {
+    filter: grayscale(10) brightness(0.55) blur(2px);
+}
+
+#spec_time:checked~div {
+    filter: none;
+}
+
+.order_form>p {
+    width: 100%;
+    max-width: 520px;
+}
+
+.form_group {
+    border: #8C6E63 2px solid;
+    border-radius: 16px;
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+}
+
+.form_group:has(input:focus, option:focus, textarea:focus) {
+    border: #3E2522 2px solid;
+}
+
+.form_group:has(input:not(:placeholder-shown):focus, textarea:not(:placeholder-shown):focus)>label {
+    background: #3E2522;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.form_group>input,
+.form_group>select,
+.form_group>textarea {
+    padding: 0.8em;
+    border-radius: 16px;
+    outline: none;
+    border: none;
+    width: 100%;
+    resize: none;
+    background: #FFF2DF;
+    height: 100%;
+}
+
+.form_group>label {
+    position: absolute;
+    top: -35px;
+    left: 10px;
+    z-index: 4;
+    padding: 0.8em;
+    background: #8C6E63;
+    border-radius: 16px;
+    font-size: 100%;
+    color: #FFFFFF;
+    opacity: 0;
+    transform: scale(.5);
+    transition: 0.3s ease;
+}
+
+.order_submit {
+    background: rgb(211, 144, 20);
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.order_submit:hover {
+    filter: brightness(1.1);
 }

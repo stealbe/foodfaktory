@@ -87,7 +87,7 @@ async function loadSets() {
                         <p class="price">${set.price} zł</p>
                         <p>${ingredientsText}</p>
                     </div>
-                    <p class="bnt_View_more">View more</p>
+                    <button class="bnt_addTo_cart">Add to cart</button>
                     <div class="full_text">
                         <h3>${set.name}</h3>
                         <p class="price">${set.price} zł</p>

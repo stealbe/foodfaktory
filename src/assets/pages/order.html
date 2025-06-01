@@ -112,7 +112,18 @@
         </nav>
     </header>
     <main>
-        <div><a href="./order.html">back</a><object data="./cart.html" type="text/html"></object></div>
+        <div><a href="./order.html"><svg viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" data-darkreader-inline-fill=""
+                    style="--darkreader-inline-fill: var(--darkreader-background-000000, #000000);">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path
+                            d="M14.583 15v1h-7.083c-3.032 0-5.5-2.467-5.5-5.5s2.468-5.5 5.5-5.5h2.912l-2.646-2.646 0.707-0.707 3.853 3.853-3.853 3.854-0.707-0.708 2.646-2.646h-2.912c-2.481 0-4.5 2.019-4.5 4.5s2.019 4.5 4.5 4.5h7.083z"
+                            fill="#000000" data-darkreader-inline-fill=""
+                            style="--darkreader-inline-fill: var(--darkreader-background-000000, #000000);"></path>
+                    </g>
+                </svg>Kontynuuj zakupy</a><object data="./cart.html" type="text/html"></object></div>
         <!-- <section class="cart">
             <h2 class="cart_title">Koszyk</h2>
             <div class="cart_positions">
@@ -294,36 +305,50 @@
             <h2 class="order_title">Zamówienie</h2>
             <form id="order_form" class="order_form">
                 <div class="form_group">
-                    <label for="name">Imię i nazwisko:</label>
-                    <input type="text" id="name" name="name" required>
+                    <label for="name">Imię i nazwisko</label>
+                    <input type="text" id="name" name="name" placeholder="Imię i nazwisko" required
+                        oninvalid="this.setCustomValidity('Пожалуйста, введите ваше имя')"
+                        oninput="this.setCustomValidity('')">
                 </div>
                 <div class="form_group">
-                    <label for="phone">Numer telefonu:</label>
-                    <input type="tel" id="phone" name="phone" required>
+                    <label for="phone">Numer telefonu</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Numer telefonu" required>
+                </div>
+                <p>*Oława</p>
+                <div class="form_group">
+                    <label for="address">Adres dostawy</label>
+                    <input type="text" id="address" name="address" placeholder="Adres dostawy" required>
                 </div>
                 <div class="form_group">
-                    <label for="address">Adres dostawy:</label>
-                    <input type="text" id="address" name="address" required>
+                    <label for="order_details">Szczegóły dostawy</label>
+                    <textarea maxlength="100" wrap="soft" id="order_details" name="order_details" rows="2"
+                        placeholder="Szczegóły dostawy"></textarea>
                 </div>
-                <div class="form_group">
-                    <label for="order_details">Szczegóły zamówienia:</label>
-                    <textarea id="order_details" name="order_details" rows="4" required></textarea>
+                <div id="time_change">
+                    <p>Preferowany czas dostawy</p>
+                    <label for="now">
+                        <input type="radio" name="time" id="now" checked>
+                        <p>Jak najszybciej</p>
+                    </label>
+                    <label for="spec_time">
+                        <input type="radio" name="time" id="spec_time">
+                        <div class="form_group">
+                            <input type="time" id="delivery_time" name="delivery_time"
+                                placeholder="Preferowany czas dostawy" required>
+                        </div>
+                    </label>
                 </div>
+                <p>*"We currently accept cash only — thank you for your understanding!"</p>
                 <div class="form_group">
-                    <label for="delivery_time">Preferowany czas dostawy:</label>
-                    <input type="time" id="delivery_time" name="delivery_time" required>
-                </div>
-                <div class="form_group">
-                    <label for="payment_method">Metoda płatności:</label>
-                    <select id="payment_method" name="payment_method" required>
-                        <option value="cash">Gotówka</option>
-                        <option value="card">Karta</option>
-                        <option value="transfer">Przelew</option>
+                    <label for="payment_method">Metoda płatności</label>
+                    <select id="payment_method" name="payment_method" disabled required>
+                        <option value="cash" selected>Gotówka</option>
                     </select>
                 </div>
                 <div class="form_group">
-                    <label for="special_requests">Dodatkowe uwagi:</label>
-                    <textarea id="special_requests" name="special_requests" rows="2"></textarea>
+                    <label for="special_requests">Dodatkowe uwagi</label>
+                    <textarea maxlength="200" id="special_requests" name="special_requests"
+                        placeholder="Dodatkowe uwagi" rows="4"></textarea>
                 </div>
                 <button type="submit" class="order_submit">Złóż zamówienie</button>
             </form>

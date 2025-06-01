@@ -39,7 +39,6 @@ if ($action === 'full_menu') {
     $stmt = $pdo->query('SELECT id, name, price, ingredients, description, weight, page_id, image1, image2, image3, image4 FROM dishes ORDER BY id');
     $dishes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    // Убираем дубликаты блюд по 'id'
     $uniqueDishes = [];
     $seenIds = [];
     foreach ($dishes as $dish) {
@@ -64,7 +63,6 @@ if ($action === 'get_sets') {
     foreach ($sets as &$row) {
         $set_id = $row['id'];
 
-        // 1. Dishes
         $stmtDishes = $pdo->prepare("
             SELECT d.id, d.name
             FROM set_dishes sd
@@ -74,7 +72,6 @@ if ($action === 'get_sets') {
         $stmtDishes->execute([$set_id]);
         $row['dishes'] = $stmtDishes->fetchAll(PDO::FETCH_ASSOC);
 
-        // 2. Backery (через таблицу set_backery)
         $stmtBackery = $pdo->prepare("
             SELECT b.id, b.name
             FROM set_backery sb
@@ -84,7 +81,6 @@ if ($action === 'get_sets') {
         $stmtBackery->execute([$set_id]);
         $row['backery'] = $stmtBackery->fetchAll(PDO::FETCH_ASSOC);
 
-        // 3. Text ingredients (через таблицу set_ingredients)
         $stmtText = $pdo->prepare("
             SELECT ingredient_text 
             FROM set_ingredients 
@@ -114,7 +110,6 @@ if ($action === 'get_bakery') {
         ]);
         exit;
     } else {
-        // Error handling
         header('HTTP/1.1 500 Internal Server Error');
         echo json_encode(['error' => 'Ошибка получения данных из таблицы backery']);
         exit;
@@ -132,7 +127,6 @@ if ($action === 'get_daily') {
 
     $daily = [];
 
-    // Получаем блюда
     $stmt = $pdo->query("
         SELECT d.id, d.name, d.description, d.price, d.image1
         FROM daily da
@@ -146,7 +140,6 @@ if ($action === 'get_daily') {
         $daily[] = $dish;
     }
 
-    // Получаем сеты
     $stmt = $pdo->query("
         SELECT s.id, s.name, s.description, s.price, s.image1
         FROM daily da

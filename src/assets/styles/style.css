@@ -127,6 +127,12 @@ div:has(object[data*="cart.html"]) a {
     transition: all 0.3s ease;
 }
 
+div:has(object[data*="cart.html"]) a svg {
+    width: 24px;
+    stroke: #FFFFFF;
+    margin-right: 12px;
+}
+
 body:has(#cart:checked) div:has(object[data*="cart.html"]) {
     display: flex;
 }
@@ -186,7 +192,8 @@ main>* {
     box-shadow: #FFE0B2 0 0 20px 12px;
 }
 
-.bnt_View_more {
+.bnt_View_more,
+.bnt_addTo_cart {
     padding: 10px;
     background-color: #8C6E63;
     color: #FFF2DF;

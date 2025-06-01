@@ -63,7 +63,7 @@ async function loadBakeryMenu() {
                         <p class="price">${item.price ? `${item.price} zł` : ''}</p>
                         <p class="ingredients">${item.ingredients ? item.ingredients.split(',').map(i => i.trim()).join(', ') : ''}</p>
                       </div>
-                      <p class="bnt_View_more">View more</p>
+                      <button class="bnt_addTo_cart">Add to cart</button>
                       <div class="full_text">
                         <h3>${item.name}</h3>
                         <p class="gramm">${item.weight ? `${item.weight}g` : ''}</p>

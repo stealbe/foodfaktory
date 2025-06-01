@@ -158,7 +158,7 @@
     width: 100%;
 }
 
-[id*="card_"]:checked+.card_btn .bnt_View_more {
+[id*="card_"]:checked+.card_btn .bnt_addTo_cart {
     display: none;
 }
 
