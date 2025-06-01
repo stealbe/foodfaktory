@@ -99,7 +99,7 @@ async function loadFullMenu() {
                 });
 
                 uniqueDishes.filter(dish => dish.page_id === newPageId).forEach(dish => {
-                    const mainImg = `<img id="card_main_img" src="${dish.image1}" alt="${dish.name} изображение">`;
+                    const mainImg = `<img id="card_main_img" src="${dish.image1}" alt="${dish.name} zdjęcie">`;
 
                     let extraImgs = '';
                     if (dish.image2 || dish.image3 || dish.image4) {
