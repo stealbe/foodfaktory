@@ -204,7 +204,6 @@ async function loadFullMenu() {
                             <p class="price">${dish.price ? `${dish.price} zł` : ''}</p>
                             <p class="ingredients">${ingredientsText}</p>
                         </div>
-                        <p class="bnt_View_more">View more</p>
                         <div class="full_text">
                             <h3>${dish.name}</h3>
                             <p class="gramm">${dish.weight ? `${dish.weight}g` : ''}</p>
@@ -214,6 +213,7 @@ async function loadFullMenu() {
                             <h4>Offer</h4>
                             <p>${dish.description}</p>
                         </div>
+                        <button class="bnt_addTo_cart">Add to cart</button>
                     </label>
                 </div>
             `;
