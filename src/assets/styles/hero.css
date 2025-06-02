@@ -24,6 +24,7 @@
     left: 0;
     transition: 0.5s ease;
     overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 .hero_text {
