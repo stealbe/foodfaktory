@@ -179,13 +179,11 @@ p {
 
 main {
     display: flex;
-    justify-items: center;
-    align-content: space-around;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-}
-
-main>* {
-    margin: 20px 0;
+    gap: 32px;
+    padding-bottom: 32px;
 }
 
 .menu {

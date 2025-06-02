@@ -16,9 +16,6 @@ async function loadDaily() {
             dailyCacheTimestamp = now;
         }
 
-        topContainer.innerHTML = '';
-        bottomContainer.innerHTML = '';
-
         for (const item of cachedDaily) {
             const isDish = !!item.dish_id;
             const isSet = !!item.set_id;
@@ -33,7 +30,7 @@ async function loadDaily() {
             const altText = `${name} zdjęcie`;
 
             // Ссылки теперь ./src/assets/pages/...
-            const href = isDish 
+            const href = isDish
                 ? `./src/assets/pages/menu.html?card=card_${item.id}`
                 : `./src/assets/pages/sets.html?card=${item.id}`;
 
