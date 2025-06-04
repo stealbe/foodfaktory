@@ -4,54 +4,21 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Food Faktory – najlepszy catering i dostawa jedzenia w Oławie. Tradycyjna kuchnia polska, świeże składniki, szybka dostawa." />
-    <meta name="robots" content="index, follow" />
-    <meta name="author" content="Food Faktory" />
-    <meta property="og:title" content="Food Faktory - Catering i dostawa jedzenia w Oławie" />
-    <meta property="og:description" content="Najlepsze jedzenie i catering w Oławie. Szybka dostawa, domowe smaki." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://foodfaktory25.pl" />
-    <meta property="og:image" content="https://foodfaktory25.pl/src/assets/images/logo.png" />
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Restaurant",
-      "name": "Food Faktory",
-      "image": "https://foodfaktory25.pl/src/assets/images/logo.png",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Brzeska 28",
-        "postalCode": "55-200",
-        "addressLocality": "Oława",
-        "addressCountry": "PL"
-      },
-      "telephone": "+48453273656",
-      "url": "https://foodfaktory25.pl",
-      "openingHours": "Mo-Su 10:00-22:00",
-      "servesCuisine": ["Polish", "European"],
-      "priceRange": "2-50 PLN"
-    }
-    </script>
     <link rel="icon" type="image/png" href="/src/assets/images/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/src/assets/images/favicon/favicon.svg" />
     <link rel="shortcut icon" href="/src/assets/images/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/src/assets/images/favicon/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="FoodFaktory" />
-    <link rel="manifest" href="/src/assets/images/favicon/site.webmanifest" />
-    <script src="../js/backed.js"></script>
     <link rel="stylesheet" href="../styles/backed.css">
     <title>Catering Food Faktory - Wypieki | Pieczywo</title>
 </head>
 
 <body>
     <header>
-        <div class="logo">
+        <div class="logo" bis_skin_checked="1">
             <a href="../../../index.html"><img src="../images/logo.webp" alt="Food Faktor logo" class="nav_logo_img">
                 <h1>Food Faktory</h1>
             </a>
         </div>
-        <div class="burger_secv">
+        <div class="burger_secv" bis_skin_checked="1">
             <input type="checkbox" id="burger_checkbox">
             <label for="burger_checkbox" class="burger">
                 <span></span>
@@ -59,7 +26,7 @@
         </div>
         <nav aria-label="Main navigation">
             <ul>
-                <li><a href="./menu.html">
+                <li><a href="./menu.html?page=1">
                         Karta dań
                     </a></li>
                 <li><a href="./sets.html">
@@ -74,24 +41,9 @@
                 <li><a href="./FAQ.html">
                         FAQ
                     </a></li>
-                <li id="cart_link"><label for="cart" aria-label="Koszyk">
-                        <input type="checkbox" name="cart" id="cart">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <path
-                                    d="M2.83179 4.38657H3.34341C4.20256 4.38657 4.96125 4.94691 5.21392 5.76808L8.27786 15.7259C8.53053 16.547 9.28921 17.1074 10.1484 17.1074H17.1114C17.9373 17.1074 18.6743 16.5889 18.9534 15.8116L20.9925 10.1312C21.679 8.21867 20.2616 6.20383 18.2295 6.20383H10.66"
-                                    stroke-width="1.7" stroke-linecap="round" data-darkreader-inline-stroke=""
-                                    style="--darkreader-inline-stroke: var(--darkreader-text-1c1c1c, #dfdbd5);"></path>
-                                <circle cx="10.1707" cy="20.5322" r="1.46779" data-darkreader-inline-fill=""
-                                    style="--darkreader-inline-fill: var(--darkreader-text-1c1c1c, #dfdbd5);"></circle>
-                                <circle cx="17.0204" cy="20.5322" r="1.46779" data-darkreader-inline-fill=""
-                                    style="--darkreader-inline-fill: var(--darkreader-text-1c1c1c, #dfdbd5);"></circle>
-                            </g>
-                        </svg>
-                        <p>Koszyk</p>
-                    </label></li>
+                <li id="order_link"><a href="./order.html">
+                        Order
+                    </a></li>
                 <li>
                     <a class="socialContainer" href="tel:+48453273656" aria-label="Call to us">
                         <svg viewBox="0 0 16 16" class="socialSvg phoneSvg">
@@ -118,13 +70,13 @@
                         <svg viewBox="0 0 25 25" fill="none" class="socialSvg MailSVG">
                             <path
                                 d="M9.00977 21.39H19.0098C20.0706 21.39 21.0881 20.9685 21.8382 20.2184C22.5883 19.4682 23.0098 18.4509 23.0098 17.39V7.39001C23.0098 6.32915 22.5883 5.31167 21.8382 4.56152C21.0881 3.81138 20.0706 3.39001 19.0098 3.39001H7.00977C5.9489 3.39001 4.93148 3.81138 4.18134 4.56152C3.43119 5.31167 3.00977 6.32915 3.00977 7.39001V12.39"
-                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                             <path d="M1.00977 18.39H11.0098" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
+                                stroke-linejoin="round"></path>
                             <path d="M1.00977 15.39H5.00977" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
+                                stroke-linejoin="round"></path>
                             <path d="M22.209 5.41992C16.599 16.0599 9.39906 16.0499 3.78906 5.41992" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
+                                stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg></a>
                 </li>
                 <li id="second_ph">
@@ -132,6 +84,23 @@
                 </li>
             </ul>
         </nav>
+        <label id="cart_link" for="cart" aria-label="Koszyk">
+            <input type="checkbox" name="cart" id="cart">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path
+                        d="M2.83179 4.38657H3.34341C4.20256 4.38657 4.96125 4.94691 5.21392 5.76808L8.27786 15.7259C8.53053 16.547 9.28921 17.1074 10.1484 17.1074H17.1114C17.9373 17.1074 18.6743 16.5889 18.9534 15.8116L20.9925 10.1312C21.679 8.21867 20.2616 6.20383 18.2295 6.20383H10.66"
+                        stroke-width="1.7" stroke-linecap="round" data-darkreader-inline-stroke=""
+                        style="--darkreader-inline-stroke: var(--darkreader-text-1c1c1c, #dfdbd5);"></path>
+                    <circle cx="10.1707" cy="20.5322" r="1.46779" data-darkreader-inline-fill=""
+                        style="--darkreader-inline-fill: var(--darkreader-text-1c1c1c, #dfdbd5);"></circle>
+                    <circle cx="17.0204" cy="20.5322" r="1.46779" data-darkreader-inline-fill=""
+                        style="--darkreader-inline-fill: var(--darkreader-text-1c1c1c, #dfdbd5);"></circle>
+                </g>
+            </svg>
+        </label>
     </header>
     <main>
         <div><a href="./backed.html"><svg viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg"

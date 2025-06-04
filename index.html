@@ -4,42 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Food Faktory – najlepszy catering i dostawa jedzenia w Oławie. Tradycyjna kuchnia polska, świeże składniki, szybka dostawa. Restauracja w oława" />
-    <meta name="robots" content="index, follow" />
-    <meta name="author" content="Food Faktory" />
-    <meta property="og:title" content="Food Faktory - Catering i dostawa jedzenia w Oławie" />
-    <meta property="og:description" content="Najlepsze jedzenie i catering w Oławie. Szybka dostawa, domowe smaki." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://foodfaktory25.pl" />
-    <meta property="og:image" content="https://foodfaktory25.pl/src/assets/images/logo.png" />
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Restaurant",
-      "name": "Food Faktory",
-      "image": "https://foodfaktory25.pl/src/assets/images/logo.png",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Brzeska 28",
-        "postalCode": "55-200",
-        "addressLocality": "Oława",
-        "addressCountry": "PL"
-      },
-      "telephone": "+48453273656",
-      "url": "https://foodfaktory25.pl",
-      "openingHours": "Mo-Su 10:00-22:00",
-      "servesCuisine": ["Polish", "European"],
-      "priceRange": "2-50 PLN"
-    }
-    </script>
     <link rel="icon" type="image/png" href="/src/assets/images/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/src/assets/images/favicon/favicon.svg" />
     <link rel="shortcut icon" href="/src/assets/images/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/src/assets/images/favicon/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="FoodFaktory" />
-    <link rel="manifest" href="/src/assets/images/favicon/site.webmanifest" />
-    <script src="./src/assets/js/daily.js"></script>
     <link rel="stylesheet" href="./src/assets/styles/main.css">
     <title>Catering Food Faktory - strona główna | Oława</title>
 </head>
@@ -59,7 +26,7 @@
         </div>
         <nav aria-label="Main navigation">
             <ul>
-                <li><a href="./src/assets/pages/menu.html">
+                <li><a href="./src/assets/pages/menu.html?page=1">
                         Karta dań
                     </a></li>
                 <li><a href="./src/assets/pages/sets.html">
@@ -74,24 +41,9 @@
                 <li><a href="./src/assets/pages/FAQ.html">
                         FAQ
                     </a></li>
-                <li id="cart_link"><label for="cart" aria-label="Koszyk">
-                        <input type="checkbox" name="cart" id="cart">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <path
-                                    d="M2.83179 4.38657H3.34341C4.20256 4.38657 4.96125 4.94691 5.21392 5.76808L8.27786 15.7259C8.53053 16.547 9.28921 17.1074 10.1484 17.1074H17.1114C17.9373 17.1074 18.6743 16.5889 18.9534 15.8116L20.9925 10.1312C21.679 8.21867 20.2616 6.20383 18.2295 6.20383H10.66"
-                                    stroke-width="1.7" stroke-linecap="round" data-darkreader-inline-stroke=""
-                                    style="--darkreader-inline-stroke: var(--darkreader-text-1c1c1c, #dfdbd5);"></path>
-                                <circle cx="10.1707" cy="20.5322" r="1.46779" data-darkreader-inline-fill=""
-                                    style="--darkreader-inline-fill: var(--darkreader-text-1c1c1c, #dfdbd5);"></circle>
-                                <circle cx="17.0204" cy="20.5322" r="1.46779" data-darkreader-inline-fill=""
-                                    style="--darkreader-inline-fill: var(--darkreader-text-1c1c1c, #dfdbd5);"></circle>
-                            </g>
-                        </svg>
-                        <p>Koszyk</p>
-                    </label></li>
+                <li id="order_link"><a href="./src/assets/pages/order.html">
+                        Order
+                    </a></li>
                 <li>
                     <a class="socialContainer" href="tel:+48453273656" aria-label="Call to us">
                         <svg viewBox="0 0 16 16" class="socialSvg phoneSvg">
@@ -132,6 +84,23 @@
                 </li>
             </ul>
         </nav>
+        <label id="cart_link" for="cart" aria-label="Koszyk">
+            <input type="checkbox" name="cart" id="cart">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path
+                        d="M2.83179 4.38657H3.34341C4.20256 4.38657 4.96125 4.94691 5.21392 5.76808L8.27786 15.7259C8.53053 16.547 9.28921 17.1074 10.1484 17.1074H17.1114C17.9373 17.1074 18.6743 16.5889 18.9534 15.8116L20.9925 10.1312C21.679 8.21867 20.2616 6.20383 18.2295 6.20383H10.66"
+                        stroke-width="1.7" stroke-linecap="round" data-darkreader-inline-stroke=""
+                        style="--darkreader-inline-stroke: var(--darkreader-text-1c1c1c, #dfdbd5);"></path>
+                    <circle cx="10.1707" cy="20.5322" r="1.46779" data-darkreader-inline-fill=""
+                        style="--darkreader-inline-fill: var(--darkreader-text-1c1c1c, #dfdbd5);"></circle>
+                    <circle cx="17.0204" cy="20.5322" r="1.46779" data-darkreader-inline-fill=""
+                        style="--darkreader-inline-fill: var(--darkreader-text-1c1c1c, #dfdbd5);"></circle>
+                </g>
+            </svg>
+        </label>
     </header>
     <main>
         <div><a href="./index.html"><svg viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -174,7 +143,7 @@
             <div class="naming_circle">
                 <input type="radio" name="hero_circle" id="order_1">
                 <label for="order_1">
-                    <img src="./src/assets/images/test_food/1.webp" alt="Szaszłyk Wieprzowy">
+                    <img src="./src/assets/images/test_food/1.webp" loading="" alt="Szaszłyk Wieprzowy">
                 </label>
                 <input type="radio" name="hero_circle" id="order_2">
                 <label for="order_2">
@@ -193,30 +162,30 @@
         </section>
         <section class="menu menu_top">
             <h2>Dania dnia</h2>
-            <a class="card reveal" href="./src/assets/pages/menu.html?card=card_1">
-                <img src="./src/assets/images/soups/solanka_mięsna.jpg" alt="Image 1">
+            <a class="card reveal" href="./src/assets/pages/menu.html?card=card_10">
+                <img src="./src/assets/images/main_dishes/Bigos_polski.webp" alt="Bigos polski zdjęcie">
                 <div class="card_text">
-                    <p>Solanka mięsna</p>
-                    <h3>Lorem, ipsum dolor.</h3>
-                    <p class="price">22 zł</p>
+                    <h3>Bigos polski</h3>
+                    <p class="descrip"></p>
+                    <p class="price">15.50 zł</p>
                     <p class="bnt_View_more">View</p>
                 </div>
             </a>
-            <a class="card reveal" href="./src/assets/pages/menu.html?card=card_13">
-                <img src="./src/assets/images/main_dishes/Lazania.jpg" alt="Image 1">
+            <a class="card reveal" href="./src/assets/pages/menu.html?card=card_33">
+                <img src="./src/assets/images/add_dishes/Brizolka_Mięsna.webp" alt="Brizolka Mięsna zdjęcie">
                 <div class="card_text">
-                    <p>Lazania</p>
-                    <h3>Lorem, ipsum dolor.</h3>
-                    <p class="price">22 zł</p>
+                    <h3>Brizolka Mięsna</h3>
+                    <p class="descrip"></p>
+                    <p class="price">10.50 zł</p>
                     <p class="bnt_View_more">View</p>
                 </div>
             </a>
-            <a class="card reveal" href="./src/assets/pages/menu.html?card=card_23">
-                <img src="./src/assets/images/add_dishes/Ziemniaki_młode.jpg" alt="Image 1">
+            <a class="card reveal" href="./src/assets/pages/menu.html?card=card_96">
+                <img src="./src/assets/images/fast_food/Hamburger_Wieprzowy.webp" alt="Hamburger Wieprzowy zdjęcie">
                 <div class="card_text">
-                    <p>Ziemniaki młode</p>
-                    <h3>Lorem, ipsum dolor.</h3>
-                    <p class="price">10 zł</p>
+                    <h3>Hamburger Wieprzowy</h3>
+                    <p class="descrip"></p>
+                    <p class="price">33.00 zł</p>
                     <p class="bnt_View_more">View</p>
                 </div>
             </a>
@@ -5229,7 +5198,7 @@
                         <h3>Godziny otwarcia:</h3>
                         <p>Poniedziałek – Piątek: 8:00 – 22:00<br />Sobota – Niedziela: 10:00 – 00:00</p>
                     </div>
-                    <a href="./src/assets/pages/menu.html">Karta dań</a>
+                    <a href="./src/assets/pages/menu.html?page=1">Karta dań</a>
                 </div>
                 <div class="hero_image">
                     <img id="img_front" src="" alt="">
@@ -5244,30 +5213,12 @@
         </section>
         <section class="menu menu_bottom">
             <h2>Polecane zestawy</h2>
-            <a class="card reveal" href="./src/assets/pages/sets.html?card=set_card_1">
-                <img src="./src/assets/images/not_avalible.png" alt="Image 1">
+            <a class="card reveal" href="./src/assets/pages/sets.html?card=1">
+                <img loading="lazy" src="./src/assets/images/not_avalible.webp" alt="Test zdjęcie">
                 <div class="card_text">
-                    <p>DIETA</p>
-                    <h3>Lorem, ipsum dolor.</h3>
-                    <p class="price">DANIE NIEDOSTEPNE</p>
-                    <p class="bnt_View_more">View</p>
-                </div>
-            </a>
-            <a class="card reveal" href="./src/assets/pages/sets.html?card=set_card_1">
-                <img src="./src/assets/images/not_avalible.png" alt="Image 1">
-                <div class="card_text">
-                    <p>DIETA</p>
-                    <h3>Lorem, ipsum dolor.</h3>
-                    <p class="price">DANIE NIEDOSTEPNE</p>
-                    <p class="bnt_View_more">View</p>
-                </div>
-            </a>
-            <a class="card reveal" href="./src/assets/pages/sets.html?card=set_card_1">
-                <img src="./src/assets/images/not_avalible.png" alt="Image 1">
-                <div class="card_text">
-                    <p>DIETA</p>
-                    <h3>Lorem, ipsum dolor.</h3>
-                    <p class="price">DANIE NIEDOSTEPNE</p>
+                    <h3>Test</h3>
+                    <p class="descrip"></p>
+                    <p class="price">0.00 zł</p>
                     <p class="bnt_View_more">View</p>
                 </div>
             </a>
@@ -5324,6 +5275,5 @@
         </section>
     </footer>
 </body>
-<script src="./src/assets/js/script.js"></script>
 
 </html>
