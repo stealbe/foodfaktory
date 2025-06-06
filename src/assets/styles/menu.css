@@ -265,6 +265,46 @@ main:has(input[id="value-8"]:checked) .page_8 {
     }
 }
 
+.slide_buttons:has(input[id="value-1"]:checked) .selection {
+    transform: translateX(0px);
+}
+
+
+.slide_buttons:has(input[id="value-2"]:checked) .selection {
+    transform: translateX(70px);
+}
+
+
+.slide_buttons:has(input[id="value-3"]:checked) .selection {
+    transform: translateX(140px);
+}
+
+
+.slide_buttons:has(input[id="value-4"]:checked) .selection {
+    transform: translateX(210px);
+}
+
+
+.slide_buttons:has(input[id="value-5"]:checked) .selection {
+    transform: translateX(280px);
+}
+
+
+.slide_buttons:has(input[id="value-6"]:checked) .selection {
+    transform: translateX(350px);
+}
+
+
+.slide_buttons:has(input[id="value-7"]:checked) .selection {
+    transform: translateX(420px);
+}
+
+
+.slide_buttons:has(input[id="value-8"]:checked) .selection {
+    transform: translateX(490px);
+}
+
+
 /* -------------------------------------------------- */
 
 @media (max-width:600px) {

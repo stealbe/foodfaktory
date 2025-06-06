@@ -22,7 +22,7 @@ header {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     background-color: #FFF2DF;
@@ -30,7 +30,7 @@ header {
     z-index: 999;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    gap: clamp(0px, 1vw, 20px);
+    padding: 0 60px;
 }
 
 .logo {
@@ -40,36 +40,27 @@ header {
     user-select: none;
 }
 
-.logo a h1 {
+.logo h1 {
     display: none;
 }
 
-.logo>a>img {
+.logo img {
     width: 120px;
     filter: drop-shadow(19px 18px 8px rgba(0, 0, 0, 0.36));
 }
 
 nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     position: sticky;
     top: 0;
     right: 0;
     overscroll-behavior: contain;
-}
-
-header>nav>ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-nav li {
-    list-style-type: none;
-    margin: 10px;
-    cursor: pointer !important;
-}
-
-li {
-    list-style-type: none;
+    gap: 15px;
+    flex: 1 0 auto;
+    margin: 0 clamp(10px, 2vw, 20px);
 }
 
 #cart_link {
@@ -141,22 +132,15 @@ nav a[href^="tel:"] {
     font-size: 28px;
 }
 
-nav li:has(.socialContainer) {
-    padding: 3px;
-    list-style-type: none;
-    background: #d3a376d2;
-    border-radius: 35px;
-}
-
 #cart_link,
-#order_link {
+nav [href*="order"] {
     background: rgb(211, 144, 20);
     padding: 10px;
     border-radius: 20px;
     z-index: 1000;
 }
 
-#order_link a {
+nav [href*="order"] {
     color: #3E2522;
 }
 
@@ -247,6 +231,7 @@ main:has([id*="card_"]:checked) .left_nav {
     height: 34px;
     background-color: #D3A376;
     border-radius: 100%;
+    box-shadow: #D3A376 0 0 0px 3px;
 }
 
 .socialSvg path {
@@ -274,42 +259,35 @@ main:has([id*="card_"]:checked) .left_nav {
 
 @media(min-width:1080px) {
 
-    nav>ul>:nth-child(1):hover a,
-    nav>ul>:nth-child(2):hover a,
-    nav>ul>:nth-child(3):hover a,
-    nav>ul>:nth-child(4):hover a,
-    nav>ul>:nth-child(5):hover a {
+    nav a[href^="./"]:not([href*="order"]):hover {
         transform: translateY(-5px);
         transition: 0.25s ease-in-out;
         font-size: 30px;
     }
 
-    #order_link:hover {
+    nav a[href*="order"]:hover {
         border-radius: 35px;
         padding: 15px;
         background: rgb(238, 208, 144);
         transition: 0.25s ease-in-out;
-    }
-
-    #order_link:hover a {
         font-size: 30px;
     }
 
-    nav li:hover a:has(.phoneSvg) {
+    nav a:has(.phoneSvg):hover {
         border: 6.5px double rgba(255, 0, 0, 0);
         background-image: linear-gradient(to right top, greenyellow 15%, yellow 75%);
         color: var(whitesmoke);
         transition: 0.35s ease-in-out;
     }
 
-    nav li:hover a:has(.FacebookSVG) {
+    nav a:has(.FacebookSVG):hover {
         border: 6.5px double rgba(255, 0, 0, 0);
         background-image: linear-gradient(to right top, rgb(77, 98, 211) 45%, rgb(47, 154, 255) 75%);
         color: var(whitesmoke);
         transition: 0.35s ease-in-out;
     }
 
-    nav li:hover a:has(.MailSVG) {
+    nav a:has(.MailSVG):hover {
         border: 6.5px double rgba(255, 0, 0, 0);
         background-image: linear-gradient(to right top, rgb(236, 179, 21) 15%, rgb(233, 70, 6) 75%);
         color: var(whitesmoke);
@@ -327,12 +305,12 @@ main:has([id*="card_"]:checked) .left_nav {
         height: 44px;
     }
 
-    nav li:hover .socialSvg path {
+    nav a:hover .socialSvg path {
         fill: rgb(255, 255, 255);
         animation: slide-in-top 0.3s both;
     }
 
-    nav li:hover .MailSVG path {
+    nav a:hover .MailSVG path {
         stroke: rgb(255, 255, 255);
         fill: none;
     }
@@ -350,7 +328,7 @@ main:has([id*="card_"]:checked) .left_nav {
 }
 
 @media(max-width:1230px) and (min-width:1080px) {
-    #order_link {
+    nav a[href*="order"] {
         display: none;
     }
 }
@@ -421,32 +399,31 @@ main:has([id*="card_"]:checked) .left_nav {
         top: 10px;
     }
 
-    nav ul {
-        position: fixed;
+    nav {
+        position: absolute;
         left: 0;
         right: 0;
+        z-index: 800;
         background-color: #d3a37694;
         display: flex;
         flex-direction: column !important;
-        flex-wrap: wrap;
         text-align: center;
+        justify-content: start;
+        margin: 0;
         top: -100%;
         bottom: 100vh;
-        transition: 0.25s;
-        align-items: none;
-        align-content: none;
+        transition: 0.25s ease-in-out;
         flex-wrap: nowrap;
         overflow-y: auto;
-        overflow-x: hidden;
     }
 
-    nav ul li {
+    nav a {
         justify-content: center;
         border-radius: 0;
     }
 
 
-    nav ul li:hover {
+    nav a:hover {
         box-shadow: rgba(50, 50, 93, 0.25) 130px 130px 150px 112px inset;
     }
 
@@ -459,10 +436,11 @@ main:has([id*="card_"]:checked) .left_nav {
         align-content: end;
     }
 
-    body:has(#burger_checkbox:checked) nav ul {
+    body:has(#burger_checkbox:checked) nav {
         top: 150px;
-        bottom: 0;
-        padding-bottom: 60px;
+        min-height: max-content;
+        height: 100vh ;
+        padding: 30px 0;
     }
 
     body:has(#burger_checkbox:checked) {
