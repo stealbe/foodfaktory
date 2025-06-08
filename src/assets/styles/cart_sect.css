@@ -8,6 +8,10 @@
     flex-wrap: wrap;
 }
 
+html {
+    overflow: hidden;
+}
+
 body {
     max-width: 1000px;
     width: 100%;
@@ -18,7 +22,7 @@ h2 {
     color: #8C6E63;
 }
 
-a[href*="order.html"] {
+a[href="/src/assets/pages/order.html"] {
     background: rgb(211, 144, 20);
     padding: 10px;
     border-radius: 20px;
@@ -28,11 +32,11 @@ a[href*="order.html"] {
     transition: all 0.3s ease;
 }
 
-a[href*="order.html"]:hover {
+a[href="/src/assets/pages/order.html"]:hover {
     filter: brightness(1.1);
 }
 
-a[href*="order.html"]:hover p {
+a[href="/src/assets/pages/order.html"]:hover p {
     filter: blur(0.65px) brightness(20);
 }
 
@@ -46,10 +50,14 @@ a[href*="order.html"]:hover p {
     align-content: space-around;
     justify-content: space-around;
     height: 100%;
-    padding-top: 15px;
-    padding-bottom: 15px;
     gap: 24px;
     padding: 40px 20px;
+}
+
+body>.cart {
+    overflow-y: scroll;
+    height: 90vh;
+    scrollbar-width: none;
 }
 
 .cart_positions {

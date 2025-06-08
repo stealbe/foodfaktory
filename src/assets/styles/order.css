@@ -2,6 +2,10 @@
 @import url(./style.css);
 @import url(./cart_sect.css);
 
+html {
+    overflow: auto;
+}
+
 body {
     background-image: none;
     max-width: none;

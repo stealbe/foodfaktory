@@ -1,7 +1,7 @@
 @import url(./normalize.css);
 @import url(./style.css);
 
-body{
+body {
     background-image: none !important;
 }
 
@@ -21,10 +21,9 @@ main {
     font-size: 24px;
 }
 
-.svg_naming {
+.FAQ_naming img {
     width: 100px;
     height: 100px;
-    fill: #8C6E63;
 }
 
 .FAQ_naming h3 {
@@ -52,10 +51,9 @@ main {
     margin: 20px 0 20px 0;
 }
 
-.FAQ_symbol {
+.FAQ_card img {
     width: 50px;
     height: 50px;
-    fill: #3E2522;
 }
 
 .FAQ_quest {
