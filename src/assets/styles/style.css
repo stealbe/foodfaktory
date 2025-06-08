@@ -30,7 +30,7 @@ header {
     z-index: 999;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    padding: 0 60px;
+    padding: 0 clamp(10px, 60px, auto);
 }
 
 .logo {
@@ -320,20 +320,20 @@ main:has([id*="card_"]:checked) .left_nav {
     }
 }
 
-@media(max-width:1410px) and (min-width:1080px) {
+@media(max-width:1410px) and (min-width:1180px) {
 
     #second_ph {
         display: none;
     }
 }
 
-@media(max-width:1230px) and (min-width:1080px) {
+@media(max-width:1270px) and (min-width:1180px) {
     nav a[href*="order"] {
         display: none;
     }
 }
 
-@media(max-width:1115px) {
+@media(max-width:1180px) {
     .burger_secv {
         display: flex;
         justify-content: center;
@@ -412,7 +412,6 @@ main:has([id*="card_"]:checked) .left_nav {
         margin: 0;
         top: -100%;
         bottom: 100vh;
-        transition: 0.25s ease-in-out;
         flex-wrap: nowrap;
         overflow-y: auto;
     }
@@ -439,8 +438,9 @@ main:has([id*="card_"]:checked) .left_nav {
     body:has(#burger_checkbox:checked) nav {
         top: 150px;
         min-height: max-content;
-        height: 100vh ;
+        height: 100vh;
         padding: 30px 0;
+        transition: 0.25s ease-in-out;
     }
 
     body:has(#burger_checkbox:checked) {

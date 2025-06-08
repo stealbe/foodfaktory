@@ -13,356 +13,107 @@
 
 <body>
     <header>
-        <div class="logo" bis_skin_checked="1">
-            <a href="../../../index.html"><img src="../images/logo.webp" alt="Food Faktor logo" class="nav_logo_img">
+        <div class="logo">
+            <a href="../../../index.php"><img src="../images/logo.webp" alt="Food Faktor logo" class="nav_logo_img">
                 <h1>Food Faktory</h1>
             </a>
         </div>
-        <div class="burger_secv" bis_skin_checked="1">
+        <div class="burger_secv">
             <input type="checkbox" id="burger_checkbox">
             <label for="burger_checkbox" class="burger">
                 <span></span>
             </label>
         </div>
         <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="./menu.html?page=1">
-                        Karta dań
-                    </a></li>
-                <li><a href="./sets.html">
-                        Zestawy
-                    </a></li>
-                <li><a href="./backed.html">
-                        Pieczywo
-                    </a></li>
-                <li><a href="./delivery.html">
-                        Zamówienia i dostawa
-                    </a></li>
-                <li><a href="./FAQ.html">
-                        FAQ
-                    </a></li>
-                <li id="order_link"><a href="./order.html">
-                        Order
-                    </a></li>
-                <li>
-                    <a class="socialContainer" href="tel:+48453273656" aria-label="Call to us">
-                        <svg viewBox="0 0 16 16" class="socialSvg phoneSvg">
-                            <path
-                                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z">
-                            </path>
-                        </svg>
-                    </a>
-                </li>
-                <li><a class="socialContainer" href="https://www.facebook.com/" aria-label="Check our facebook">
-                        <svg class="socialSvg FacebookSVG" viewBox="0 0 32 32" version="1.1"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <path
-                                    d="M30.996 16.091c-0.001-8.281-6.714-14.994-14.996-14.994s-14.996 6.714-14.996 14.996c0 7.455 5.44 13.639 12.566 14.8l0.086 0.012v-10.478h-3.808v-4.336h3.808v-3.302c-0.019-0.167-0.029-0.361-0.029-0.557 0-2.923 2.37-5.293 5.293-5.293 0.141 0 0.281 0.006 0.42 0.016l-0.018-0.001c1.199 0.017 2.359 0.123 3.491 0.312l-0.134-0.019v3.69h-1.892c-0.086-0.012-0.185-0.019-0.285-0.019-1.197 0-2.168 0.97-2.168 2.168 0 0.068 0.003 0.135 0.009 0.202l-0.001-0.009v2.812h4.159l-0.665 4.336h-3.494v10.478c7.213-1.174 12.653-7.359 12.654-14.814v-0z">
-                                </path>
-                            </g>
-                        </svg>
-                    </a>
-                </li>
-                <li><a class="socialContainer" href="mailto:Food.faktory25@gmail.com" aria-label="Mail to us">
-                        <svg viewBox="0 0 25 25" fill="none" class="socialSvg MailSVG">
-                            <path
-                                d="M9.00977 21.39H19.0098C20.0706 21.39 21.0881 20.9685 21.8382 20.2184C22.5883 19.4682 23.0098 18.4509 23.0098 17.39V7.39001C23.0098 6.32915 22.5883 5.31167 21.8382 4.56152C21.0881 3.81138 20.0706 3.39001 19.0098 3.39001H7.00977C5.9489 3.39001 4.93148 3.81138 4.18134 4.56152C3.43119 5.31167 3.00977 6.32915 3.00977 7.39001V12.39"
-                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M1.00977 18.39H11.0098" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round"></path>
-                            <path d="M1.00977 15.39H5.00977" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round"></path>
-                            <path d="M22.209 5.41992C16.599 16.0599 9.39906 16.0499 3.78906 5.41992" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg></a>
-                </li>
-                <li id="second_ph">
-                    <a href="tel:+48453273656">Numer telefonu:<br> +48453273656</a>
-                </li>
-            </ul>
-        </nav>
-        <label id="cart_link" for="cart" aria-label="Koszyk">
-            <input type="checkbox" name="cart" id="cart">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
+            <a href="./menu.php">
+                Karta dań
+            </a>
+            <a href="./sets.php">
+                Zestawy
+            </a>
+            <a href="./backed.php">
+                Pieczywo
+            </a>
+            <a href="./delivery.html">
+                Zamówienia i dostawa
+            </a>
+            <a href="./FAQ.html">
+                FAQ
+            </a>
+            <a href="./order.html">
+                Order
+            </a>
+
+            <a class="socialContainer" href="tel:+48453273656" aria-label="Call to us">
+                <svg viewBox="0 0 16 16" class="socialSvg phoneSvg">
                     <path
-                        d="M2.83179 4.38657H3.34341C4.20256 4.38657 4.96125 4.94691 5.21392 5.76808L8.27786 15.7259C8.53053 16.547 9.28921 17.1074 10.1484 17.1074H17.1114C17.9373 17.1074 18.6743 16.5889 18.9534 15.8116L20.9925 10.1312C21.679 8.21867 20.2616 6.20383 18.2295 6.20383H10.66"
-                        stroke-width="1.7" stroke-linecap="round" data-darkreader-inline-stroke=""
-                        style="--darkreader-inline-stroke: var(--darkreader-text-1c1c1c, #dfdbd5);"></path>
-                    <circle cx="10.1707" cy="20.5322" r="1.46779" data-darkreader-inline-fill=""
-                        style="--darkreader-inline-fill: var(--darkreader-text-1c1c1c, #dfdbd5);"></circle>
-                    <circle cx="17.0204" cy="20.5322" r="1.46779" data-darkreader-inline-fill=""
-                        style="--darkreader-inline-fill: var(--darkreader-text-1c1c1c, #dfdbd5);"></circle>
-                </g>
-            </svg>
-        </label>
-    </header>
-    <main>
-        <div><a href="./sets.html"><svg viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" data-darkreader-inline-fill=""
-                    style="--darkreader-inline-fill: var(--darkreader-background-000000, #000000);">
+                        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z">
+                    </path>
+                </svg>
+            </a>
+            <a class="socialContainer" href="https://www.facebook.com/" aria-label="Check our facebook">
+                <svg class="socialSvg FacebookSVG" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
                         <path
-                            d="M14.583 15v1h-7.083c-3.032 0-5.5-2.467-5.5-5.5s2.468-5.5 5.5-5.5h2.912l-2.646-2.646 0.707-0.707 3.853 3.853-3.853 3.854-0.707-0.708 2.646-2.646h-2.912c-2.481 0-4.5 2.019-4.5 4.5s2.019 4.5 4.5 4.5h7.083z"
-                            fill="#000000" data-darkreader-inline-fill=""
-                            style="--darkreader-inline-fill: var(--darkreader-background-000000, #000000);"></path>
+                            d="M30.996 16.091c-0.001-8.281-6.714-14.994-14.996-14.994s-14.996 6.714-14.996 14.996c0 7.455 5.44 13.639 12.566 14.8l0.086 0.012v-10.478h-3.808v-4.336h3.808v-3.302c-0.019-0.167-0.029-0.361-0.029-0.557 0-2.923 2.37-5.293 5.293-5.293 0.141 0 0.281 0.006 0.42 0.016l-0.018-0.001c1.199 0.017 2.359 0.123 3.491 0.312l-0.134-0.019v3.69h-1.892c-0.086-0.012-0.185-0.019-0.285-0.019-1.197 0-2.168 0.97-2.168 2.168 0 0.068 0.003 0.135 0.009 0.202l-0.001-0.009v2.812h4.159l-0.665 4.336h-3.494v10.478c7.213-1.174 12.653-7.359 12.654-14.814v-0z">
+                        </path>
                     </g>
-                </svg>Kontynuuj zakupy</a><object data="./cart.html" type="text/html"></object></div>
+                </svg>
+            </a>
+            <a class="socialContainer" href="mailto:Food.faktory25@gmail.com" aria-label="Mail to us">
+                <svg viewBox="0 0 25 25" fill="none" class="socialSvg MailSVG">
+                    <path
+                        d="M9.00977 21.39H19.0098C20.0706 21.39 21.0881 20.9685 21.8382 20.2184C22.5883 19.4682 23.0098 18.4509 23.0098 17.39V7.39001C23.0098 6.32915 22.5883 5.31167 21.8382 4.56152C21.0881 3.81138 20.0706 3.39001 19.0098 3.39001H7.00977C5.9489 3.39001 4.93148 3.81138 4.18134 4.56152C3.43119 5.31167 3.00977 6.32915 3.00977 7.39001V12.39"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M1.00977 18.39H11.0098" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    </path>
+                    <path d="M1.00977 15.39H5.00977" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    </path>
+                    <path d="M22.209 5.41992C16.599 16.0599 9.39906 16.0499 3.78906 5.41992" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </a>
+            <a id="second_ph" href="tel:+48453273656">Numer telefonu:<br> +48453273656</a>
+        </nav>
+        <label id="cart_link" for="cart" aria-label="Koszyk">
+            <input type="checkbox" name="cart" id="cart">
+            <img src="../images/UI/cart.svg" alt="Koszyk ikona">
+        </label>
+    </header>
+    <main>
+        <div><a href="./sets.php">
+                <img src="../images/UI/back.svg" alt="Wstecz ikona">
+                <p>Kontynuuj zakupy</p>
+            </a><object data="./cart.html" type="text/html"></object></div>
         <section class="menu">
             <div class="card reveal">
                 <input type="radio" id="set_card_1" name="menu_card" value="1" />
                 <label for="set_card_1" class="card_btn">
-                    <a class="back_btn" href="./sets.html">← Back</a>
+                    <a class="back_btn" href="./sets.php">← Back</a>
                     <div>
-                        <img id="card_main_img" src="../images/not_avalible.png" alt="">
-                        <!-- <div class="img_scroll">
-                        <button class="card_img_select" id="card_img_1"><img src="../images/vector_food.png"
-                                alt=""></button>
-                        <button class="card_img_select" id="card_img_2"><img src="../images/logo.png" alt=""></button>
-                        <button class="card_img_select" id="card_img_3"><img src="../images/not_avalible.png"
-                                alt=""></button>
-                    </div> -->
+                        <img loading="lazy" id="card_main_img" src="../images/not_avalible.webp" alt="Test zdjęcie" />
                     </div>
                     <div class="card_text">
-                        <h3>Lorem, ipsum dolor.</h3>
-                        <p class="price">100$</p>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At provident, necessitatibus
-                            atque
-                            unde
-                            doloribus esse quas. Laboriosam magnam ullam dolorum nemo, consectetur sint et earum
-                            reiciendis.
-                            Adipisci totam animi ducimus?</p>
+                        <h3>Test</h3>
+                        <p class="price">0.00 zł</p>
+                        <p>Pierogi z twarogiem, Herbata Czarna/Zielona/Owocowa/Cytrusowa, Chleb żytni, Toma</p>
                     </div>
-                    <p class="bnt_View_more">View more</p>
                     <div class="full_text">
-                        <h3>Name</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At provident, necessitatibus
-                            atque
-                            unde
-                            doloribus esse quas. Laboriosam magnam ullam dolorum nemo, consectetur sint et earum
-                            reiciendis.
-                            Adipisci totam animi ducimus?</p>
+                        <h3>Test</h3>
+                        <p class="price">0.00 zł</p>
                         <h4>Ingredients</h4>
                         <ul>
-                            <li>Lorem, ipsum dolor.</li>
-                            <li>Lorem, ipsum dolor.</li>
-                            <li>Lorem, ipsum dolor.</li>
-                            <li>Lorem, ipsum dolor.</li>
-                            <li>Lorem, ipsum dolor.</li>
-                            <li>Lorem, ipsum dolor.</li>
+                            <li><a href="./menu.php?card=card_20">Pierogi z twarogiem</a></li>
+                            <li><a href="./menu.php?card=card_122">Herbata Czarna/Zielona/Owocowa/Cytrusowa</a></li>
+                            <li><a href="./backed.php?item=2">Chleb żytni</a></li>
+                            <li>Toma</li>
                         </ul>
                         <h4>Offer</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi harum
-                            error a debitis aut laboriosam corrupti fugit? Ratione minima optio voluptatem sunt
-                            earum, debitis, saepe tempora, tenetur dicta quam cupiditate sapiente excepturi
-                            similique dolorem doloribus eveniet nisi quaerat officiis natus corporis vitae fuga
-                            distinctio ullam? Pariatur, magni similique neque necessitatibus sapiente hic, ducimus
-                            eveniet repellendus recusandae vitae minus provident fugiat consectetur harum dolores.
-                            Id quaerat itaque consequuntur quos numquam voluptates esse iste nostrum dicta cumque
-                            deserunt praesentium aspernatur necessitatibus sint nam atque minima, nisi amet qui quam
-                            ipsum. Dolore quisquam natus nesciunt eligendi hic assumenda quae, fuga repellendus
-                            recusandae sed doloremque, similique cupiditate corrupti. Deserunt officiis repudiandae
-                            inventore consequuntur. Totam quidem voluptate ex, exercitationem possimus nemo
-                            distinctio quibusdam expedita similique optio recusandae odit sed quos tenetur dolorem
-                            ducimus tempore error! Fugiat assumenda maiores ullam, a ipsam odit ut? Doloribus,
-                            possimus culpa repudiandae maxime, iusto dolorum iure hic et ab consequuntur, porro
-                            quasi iste inventore libero recusandae aperiam numquam at repellendus nihil quaerat qui
-                            debitis. Vero, omnis est? Libero ullam minus fugiat fugit quas asperiores ex mollitia
-                            deleniti, facere praesentium ipsa labore? Eius, nulla. Placeat natus ipsa quia
-                            architecto est nesciunt commodi! Quod blanditiis voluptas inventore laboriosam optio
-                            rerum, vitae adipisci incidunt debitis id. Consequuntur labore reiciendis eveniet saepe,
-                            architecto laboriosam voluptatem eius ipsa est pariatur voluptas exercitationem tempora?
-                            Sed assumenda voluptatem earum, quam consequatur officiis adipisci perspiciatis unde?
-                            Accusamus beatae eum natus nulla, officia ea, cum veniam delectus voluptas non
-                            repudiandae aperiam iste placeat reiciendis. Quod ratione vero et debitis accusamus
-                            labore repellat, voluptatum doloremque dignissimos voluptatem numquam expedita? Aliquam
-                            esse ut nihil voluptas hic placeat facilis, debitis numquam tempora molestias eligendi
-                            aspernatur dolor, omnis minima, error illo! Maxime animi neque, voluptates enim
-                            cupiditate aut consequatur velit eaque ipsum, voluptate quidem quibusdam soluta quasi
-                            vel nulla quas numquam expedita fuga iusto quam at esse rem. Libero ducimus distinctio
-                            aspernatur consequuntur ipsa tenetur alias ipsam, aliquam quia tempore sunt doloribus,
-                            nisi, nam doloremque! Tenetur optio placeat facilis eligendi nulla doloribus. Ullam
-                            ducimus fugit corrupti rerum odio ea aut debitis ratione, quis vero quisquam esse vitae
-                            rem labore repudiandae nihil nulla! Recusandae praesentium aliquid excepturi architecto
-                            eius perspiciatis, temporibus quasi explicabo laboriosam nulla voluptatum saepe
-                            accusantium voluptas officiis ipsa magnam libero itaque quam totam. Dicta non impedit,
-                            error molestias illum quod minima rerum inventore amet neque mollitia hic nostrum optio
-                            doloribus incidunt ullam repellat ipsa at corporis itaque. Debitis eveniet vel dolorum.
-                        </p>
+                        <p></p>
                     </div>
-                </label>
-            </div>
-            <div class="card reveal">
-                <input type="radio" id="set_card_2" name="menu_card" value="2" />
-                <label for="set_card_2" class="card_btn">
-                    <a class="back_btn" href="./sets.html">← Back</a>
-                    <div>
-                        <img id="card_main_img" src="../images/not_avalible.png" alt="">
-                        <!-- <div class="img_scroll">
-                        <button class="card_img_select" id="card_img_1"><img src="../images/vector_food.png"
-                                alt=""></button>
-                        <button class="card_img_select" id="card_img_2"><img src="../images/logo.png" alt=""></button>
-                        <button class="card_img_select" id="card_img_3"><img src="../images/not_avalible.png"
-                                alt=""></button>
-                    </div> -->
-                    </div>
-                    <div class="card_text">
-                        <h3>Lorem, ipsum dolor.</h3>
-                        <p class="price">100$</p>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At provident, necessitatibus
-                            atque
-                            unde
-                            doloribus esse quas. Laboriosam magnam ullam dolorum nemo, consectetur sint et earum
-                            reiciendis.
-                            Adipisci totam animi ducimus?</p>
-                    </div>
-                    <p class="bnt_View_more">View more</p>
-                    <div class="full_text">
-                        <h3>Name</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At provident, necessitatibus
-                            atque
-                            unde
-                            doloribus esse quas. Laboriosam magnam ullam dolorum nemo, consectetur sint et earum
-                            reiciendis.
-                            Adipisci totam animi ducimus?</p>
-                        <h4>Ingredients</h4>
-                        <ul>
-                            <li>Lorem, ipsum dolor.</li>
-                            <li>Lorem, ipsum dolor.</li>
-                            <li>Lorem, ipsum dolor.</li>
-                            <li>Lorem, ipsum dolor.</li>
-                            <li>Lorem, ipsum dolor.</li>
-                            <li>Lorem, ipsum dolor.</li>
-                        </ul>
-                        <h4>Offer</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi harum
-                            error a debitis aut laboriosam corrupti fugit? Ratione minima optio voluptatem sunt
-                            earum, debitis, saepe tempora, tenetur dicta quam cupiditate sapiente excepturi
-                            similique dolorem doloribus eveniet nisi quaerat officiis natus corporis vitae fuga
-                            distinctio ullam? Pariatur, magni similique neque necessitatibus sapiente hic, ducimus
-                            eveniet repellendus recusandae vitae minus provident fugiat consectetur harum dolores.
-                            Id quaerat itaque consequuntur quos numquam voluptates esse iste nostrum dicta cumque
-                            deserunt praesentium aspernatur necessitatibus sint nam atque minima, nisi amet qui quam
-                            ipsum. Dolore quisquam natus nesciunt eligendi hic assumenda quae, fuga repellendus
-                            recusandae sed doloremque, similique cupiditate corrupti. Deserunt officiis repudiandae
-                            inventore consequuntur. Totam quidem voluptate ex, exercitationem possimus nemo
-                            distinctio quibusdam expedita similique optio recusandae odit sed quos tenetur dolorem
-                            ducimus tempore error! Fugiat assumenda maiores ullam, a ipsam odit ut? Doloribus,
-                            possimus culpa repudiandae maxime, iusto dolorum iure hic et ab consequuntur, porro
-                            quasi iste inventore libero recusandae aperiam numquam at repellendus nihil quaerat qui
-                            debitis. Vero, omnis est? Libero ullam minus fugiat fugit quas asperiores ex mollitia
-                            deleniti, facere praesentium ipsa labore? Eius, nulla. Placeat natus ipsa quia
-                            architecto est nesciunt commodi! Quod blanditiis voluptas inventore laboriosam optio
-                            rerum, vitae adipisci incidunt debitis id. Consequuntur labore reiciendis eveniet saepe,
-                            architecto laboriosam voluptatem eius ipsa est pariatur voluptas exercitationem tempora?
-                            Sed assumenda voluptatem earum, quam consequatur officiis adipisci perspiciatis unde?
-                            Accusamus beatae eum natus nulla, officia ea, cum veniam delectus voluptas non
-                            repudiandae aperiam iste placeat reiciendis. Quod ratione vero et debitis accusamus
-                            labore repellat, voluptatum doloremque dignissimos voluptatem numquam expedita? Aliquam
-                            esse ut nihil voluptas hic placeat facilis, debitis numquam tempora molestias eligendi
-                            aspernatur dolor, omnis minima, error illo! Maxime animi neque, voluptates enim
-                            cupiditate aut consequatur velit eaque ipsum, voluptate quidem quibusdam soluta quasi
-                            vel nulla quas numquam expedita fuga iusto quam at esse rem. Libero ducimus distinctio
-                            aspernatur consequuntur ipsa tenetur alias ipsam, aliquam quia tempore sunt doloribus,
-                            nisi, nam doloremque! Tenetur optio placeat facilis eligendi nulla doloribus. Ullam
-                            ducimus fugit corrupti rerum odio ea aut debitis ratione, quis vero quisquam esse vitae
-                            rem labore repudiandae nihil nulla! Recusandae praesentium aliquid excepturi architecto
-                            eius perspiciatis, temporibus quasi explicabo laboriosam nulla voluptatum saepe
-                            accusantium voluptas officiis ipsa magnam libero itaque quam totam. Dicta non impedit,
-                            error molestias illum quod minima rerum inventore amet neque mollitia hic nostrum optio
-                            doloribus incidunt ullam repellat ipsa at corporis itaque. Debitis eveniet vel dolorum.
-                        </p>
-                    </div>
-                </label>
-            </div>
-            <div class="card reveal">
-                <input type="radio" id="set_card_3" name="menu_card" value="3" />
-                <label for="set_card_3" class="card_btn">
-                    <a class="back_btn" href="./sets.html">← Back</a>
-                    <div>
-                        <img id="card_main_img" src="../images/not_avalible.png" alt="">
-                        <!-- <div class="img_scroll">
-                        <button class="card_img_select" id="card_img_1"><img src="../images/vector_food.png"
-                                alt=""></button>
-                        <button class="card_img_select" id="card_img_2"><img src="../images/logo.png" alt=""></button>
-                        <button class="card_img_select" id="card_img_3"><img src="../images/not_avalible.png"
-                                alt=""></button>
-                    </div> -->
-                    </div>
-                    <div class="card_text">
-                        <h3>Lorem, ipsum dolor.</h3>
-                        <p class="price">100$</p>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At provident, necessitatibus
-                            atque
-                            unde
-                            doloribus esse quas. Laboriosam magnam ullam dolorum nemo, consectetur sint et earum
-                            reiciendis.
-                            Adipisci totam animi ducimus?</p>
-                    </div>
-                    <p class="bnt_View_more">View more</p>
-                    <div class="full_text">
-                        <h3>Name</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At provident, necessitatibus
-                            atque
-                            unde
-                            doloribus esse quas. Laboriosam magnam ullam dolorum nemo, consectetur sint et earum
-                            reiciendis.
-                            Adipisci totam animi ducimus?</p>
-                        <h4>Ingredients</h4>
-                        <ul>
-                            <li>Lorem, ipsum dolor.</li>
-                            <li>Lorem, ipsum dolor.</li>
-                            <li>Lorem, ipsum dolor.</li>
-                            <li>Lorem, ipsum dolor.</li>
-                            <li>Lorem, ipsum dolor.</li>
-                            <li>Lorem, ipsum dolor.</li>
-                        </ul>
-                        <h4>Offer</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi harum
-                            error a debitis aut laboriosam corrupti fugit? Ratione minima optio voluptatem sunt
-                            earum, debitis, saepe tempora, tenetur dicta quam cupiditate sapiente excepturi
-                            similique dolorem doloribus eveniet nisi quaerat officiis natus corporis vitae fuga
-                            distinctio ullam? Pariatur, magni similique neque necessitatibus sapiente hic, ducimus
-                            eveniet repellendus recusandae vitae minus provident fugiat consectetur harum dolores.
-                            Id quaerat itaque consequuntur quos numquam voluptates esse iste nostrum dicta cumque
-                            deserunt praesentium aspernatur necessitatibus sint nam atque minima, nisi amet qui quam
-                            ipsum. Dolore quisquam natus nesciunt eligendi hic assumenda quae, fuga repellendus
-                            recusandae sed doloremque, similique cupiditate corrupti. Deserunt officiis repudiandae
-                            inventore consequuntur. Totam quidem voluptate ex, exercitationem possimus nemo
-                            distinctio quibusdam expedita similique optio recusandae odit sed quos tenetur dolorem
-                            ducimus tempore error! Fugiat assumenda maiores ullam, a ipsam odit ut? Doloribus,
-                            possimus culpa repudiandae maxime, iusto dolorum iure hic et ab consequuntur, porro
-                            quasi iste inventore libero recusandae aperiam numquam at repellendus nihil quaerat qui
-                            debitis. Vero, omnis est? Libero ullam minus fugiat fugit quas asperiores ex mollitia
-                            deleniti, facere praesentium ipsa labore? Eius, nulla. Placeat natus ipsa quia
-                            architecto est nesciunt commodi! Quod blanditiis voluptas inventore laboriosam optio
-                            rerum, vitae adipisci incidunt debitis id. Consequuntur labore reiciendis eveniet saepe,
-                            architecto laboriosam voluptatem eius ipsa est pariatur voluptas exercitationem tempora?
-                            Sed assumenda voluptatem earum, quam consequatur officiis adipisci perspiciatis unde?
-                            Accusamus beatae eum natus nulla, officia ea, cum veniam delectus voluptas non
-                            repudiandae aperiam iste placeat reiciendis. Quod ratione vero et debitis accusamus
-                            labore repellat, voluptatum doloremque dignissimos voluptatem numquam expedita? Aliquam
-                            esse ut nihil voluptas hic placeat facilis, debitis numquam tempora molestias eligendi
-                            aspernatur dolor, omnis minima, error illo! Maxime animi neque, voluptates enim
-                            cupiditate aut consequatur velit eaque ipsum, voluptate quidem quibusdam soluta quasi
-                            vel nulla quas numquam expedita fuga iusto quam at esse rem. Libero ducimus distinctio
-                            aspernatur consequuntur ipsa tenetur alias ipsam, aliquam quia tempore sunt doloribus,
-                            nisi, nam doloremque! Tenetur optio placeat facilis eligendi nulla doloribus. Ullam
-                            ducimus fugit corrupti rerum odio ea aut debitis ratione, quis vero quisquam esse vitae
-                            rem labore repudiandae nihil nulla! Recusandae praesentium aliquid excepturi architecto
-                            eius perspiciatis, temporibus quasi explicabo laboriosam nulla voluptatum saepe
-                            accusantium voluptas officiis ipsa magnam libero itaque quam totam. Dicta non impedit,
-                            error molestias illum quod minima rerum inventore amet neque mollitia hic nostrum optio
-                            doloribus incidunt ullam repellat ipsa at corporis itaque. Debitis eveniet vel dolorum.
-                        </p>
-                    </div>
+                    <button class="bnt_addTo_cart">Add to cart</button>
                 </label>
             </div>
         </section>
@@ -418,7 +169,5 @@
         </section>
     </footer>
 </body>
-<script src="../js/script.js"></script>
-<script src="../js/add_to_cart.js"></script>
 
 </html>

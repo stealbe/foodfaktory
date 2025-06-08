@@ -14,7 +14,7 @@
 <body>
     <header>
         <div class="logo">
-            <a href="../../../index.html"><img src="../images/logo.webp" alt="Food Faktor logo" class="nav_logo_img">
+            <a href="../../../index.php"><img src="../images/logo.webp" alt="Food Faktor logo" class="nav_logo_img">
                 <h1>Food Faktory</h1>
             </a>
         </div>
@@ -25,13 +25,13 @@
             </label>
         </div>
         <nav aria-label="Main navigation">
-            <a href="./menu.html?page=1">
+            <a href="./menu.php">
                 Karta dań
             </a>
-            <a href="./sets.html">
+            <a href="./sets.php">
                 Zestawy
             </a>
-            <a href="./backed.html">
+            <a href="./backed.php">
                 Pieczywo
             </a>
             <a href="./delivery.html">
@@ -79,35 +79,14 @@
         </nav>
         <label id="cart_link" for="cart" aria-label="Koszyk">
             <input type="checkbox" name="cart" id="cart">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                    <path
-                        d="M2.83179 4.38657H3.34341C4.20256 4.38657 4.96125 4.94691 5.21392 5.76808L8.27786 15.7259C8.53053 16.547 9.28921 17.1074 10.1484 17.1074H17.1114C17.9373 17.1074 18.6743 16.5889 18.9534 15.8116L20.9925 10.1312C21.679 8.21867 20.2616 6.20383 18.2295 6.20383H10.66"
-                        stroke-width="1.7" stroke-linecap="round" data-darkreader-inline-stroke=""
-                        style="--darkreader-inline-stroke: var(--darkreader-text-1c1c1c, #dfdbd5);"></path>
-                    <circle cx="10.1707" cy="20.5322" r="1.46779" data-darkreader-inline-fill=""
-                        style="--darkreader-inline-fill: var(--darkreader-text-1c1c1c, #dfdbd5);"></circle>
-                    <circle cx="17.0204" cy="20.5322" r="1.46779" data-darkreader-inline-fill=""
-                        style="--darkreader-inline-fill: var(--darkreader-text-1c1c1c, #dfdbd5);"></circle>
-                </g>
-            </svg>
+            <img src="../images/UI/cart.svg" alt="Koszyk ikona">
         </label>
     </header>
     <main>
-        <div><a href="./menu.html"><svg viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" data-darkreader-inline-fill=""
-                    style="--darkreader-inline-fill: var(--darkreader-background-000000, #000000);">
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                    <g id="SVGRepo_iconCarrier">
-                        <path
-                            d="M14.583 15v1h-7.083c-3.032 0-5.5-2.467-5.5-5.5s2.468-5.5 5.5-5.5h2.912l-2.646-2.646 0.707-0.707 3.853 3.853-3.853 3.854-0.707-0.708 2.646-2.646h-2.912c-2.481 0-4.5 2.019-4.5 4.5s2.019 4.5 4.5 4.5h7.083z"
-                            fill="#000000" data-darkreader-inline-fill=""
-                            style="--darkreader-inline-fill: var(--darkreader-background-000000, #000000);"></path>
-                    </g>
-                </svg>Kontynuuj zakupy</a><object data="./cart.html" type="text/html"></object></div>
+        <div><a href="./menu.php">
+                <img src="../images/UI/back.svg" alt="Wstecz ikona">
+                <p>Kontynuuj zakupy</p>
+            </a><object data="./cart.html" type="text/html"></object></div>
         <section class="lowbar">
             <div class="slide_buttons">
                 <label>
@@ -145,39 +124,14 @@
                 <span class="selection"></span>
             </div>
         </section>
-        <!-- <label for="left_nav_burger">
-            <input type="checkbox" name="left_nav_burger" id="left_nav_burger">
-            <span>Podrozdziały ></span>
-        </label> -->
+
         <div class="menu_wh_nav">
-            <!-- <aside class="left_nav">
-                <h3>Go to</h3>
-                <ul data-title="nav_page_1"></ul>
-                <ul data-title="nav_page_2">
-                    <li><a href="#główne">Główne</a></li>
-                    <li><a href="#pierogi_podrozdział">Pierogi</a></li>
-                </ul>
-                <ul data-title="nav_page_3">
-                    <li><a href="#ziemniaki">Ziemniaki</a></li>
-                    <li><a href="#kasze">Kasze</a></li>
-                    <li><a href="#makarony">Makarony</a></li>
-                    <li><a href="#mięsa">Mięsa</a></li>
-                </ul>
-                <ul data-title="nav_page_4">
-                    <li><a href="#pizze">Pizze</a></li>
-                    <li><a href="#hamburgery">Hamburgery</a></li>
-                </ul>
-                <ul data-title="nav_page_5"></ul>
-                <ul data-title="nav_page_6"></ul>
-                <ul data-title="nav_page_7"></ul>
-                <ul data-title="nav_page_8"></ul>
-            </aside> -->
             <section class="menu">
                 <div class="page_1" data-title="Zupy">
                     <div class="card reveal">
-                        <input type="radio" id="card_3" name="menu_card" value="3">
+                        <input type="radio" id="card_3" name="menu_card" value="3" />
                         <label for="card_3" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=1">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=1">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/soups/solanka_mięsna.webp"
                                     alt="Solanka mięsna">
@@ -212,9 +166,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_4" name="menu_card" value="4">
+                        <input type="radio" id="card_4" name="menu_card" value="4" />
                         <label for="card_4" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=1">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=1">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/soups/barszcz_ukraiński.webp"
                                     alt="Barszcz ukraiński">
@@ -244,9 +198,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_5" name="menu_card" value="5">
+                        <input type="radio" id="card_5" name="menu_card" value="5" />
                         <label for="card_5" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=1">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=1">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/soups/rosół.webp" alt="Rosół">
 
@@ -276,9 +230,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_6" name="menu_card" value="6">
+                        <input type="radio" id="card_6" name="menu_card" value="6" />
                         <label for="card_6" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=1">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=1">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/soups/kremowa_wegetarianska.webp"
                                     alt="Kremowa wegetariańska">
@@ -309,9 +263,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_7" name="menu_card" value="7">
+                        <input type="radio" id="card_7" name="menu_card" value="7" />
                         <label for="card_7" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=1">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=1">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/soups/ogórkowa.webp"
                                     alt="Ogórkowa">
@@ -346,9 +300,9 @@
                 </div>
                 <div class="page_2" data-title="Dania Główne">
                     <div class="card reveal">
-                        <input type="radio" id="card_8" name="menu_card" value="8">
+                        <input type="radio" id="card_8" name="menu_card" value="8" />
                         <label for="card_8" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=2">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=2">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/main_dishes/Pilaw.webp"
                                     alt="Pilaw">
@@ -378,9 +332,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_10" name="menu_card" value="10">
+                        <input type="radio" id="card_10" name="menu_card" value="10" />
                         <label for="card_10" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=2">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=2">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/main_dishes/Bigos_polski.webp"
                                     alt="Bigos polski">
@@ -415,9 +369,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_11" name="menu_card" value="11">
+                        <input type="radio" id="card_11" name="menu_card" value="11" />
                         <label for="card_11" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=2">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=2">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img"
                                     src="../images/main_dishes/Spaghetti_z_mięsem_i_grzybami.webp"
@@ -451,9 +405,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_12" name="menu_card" value="12">
+                        <input type="radio" id="card_12" name="menu_card" value="12" />
                         <label for="card_12" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=2">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=2">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/main_dishes/Gołąbki.webp"
                                     alt="Gołąbki">
@@ -484,9 +438,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_13" name="menu_card" value="13">
+                        <input type="radio" id="card_13" name="menu_card" value="13" />
                         <label for="card_13" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=2">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=2">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/not_avalible.webp" alt="Lazania">
 
@@ -512,9 +466,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_14" name="menu_card" value="14">
+                        <input type="radio" id="card_14" name="menu_card" value="14" />
                         <label for="card_14" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=2">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=2">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/main_dishes/Kociołek_domowy.webp"
                                     alt="Kociołek domowy">
@@ -546,9 +500,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_15" name="menu_card" value="15">
+                        <input type="radio" id="card_15" name="menu_card" value="15" />
                         <label for="card_15" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=2">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=2">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/main_dishes/Krokiety.webp"
                                     alt="Krokiety">
@@ -579,9 +533,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_16" name="menu_card" value="16">
+                        <input type="radio" id="card_16" name="menu_card" value="16" />
                         <label for="card_16" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=2">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=2">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/main_dishes/Pelmeni_z_mięsem.webp"
                                     alt="Pelmeni z mięsem">
@@ -612,9 +566,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_17" name="menu_card" value="17">
+                        <input type="radio" id="card_17" name="menu_card" value="17" />
                         <label for="card_17" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=2">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=2">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img"
                                     src="../images/main_dishes/Pierogi_z_ziemniakami_i_bekonem.webp"
@@ -645,9 +599,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_18" name="menu_card" value="18">
+                        <input type="radio" id="card_18" name="menu_card" value="18" />
                         <label for="card_18" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=2">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=2">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img"
                                     src="../images/main_dishes/Pierogi_z_kapustą_i_grzybami.webp"
@@ -678,9 +632,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_19" name="menu_card" value="19">
+                        <input type="radio" id="card_19" name="menu_card" value="19" />
                         <label for="card_19" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=2">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=2">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img"
                                     src="../images/main_dishes/Pierogi_z_kapustą.webp" alt="Pierogi z kapustą">
@@ -711,9 +665,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_20" name="menu_card" value="20">
+                        <input type="radio" id="card_20" name="menu_card" value="20" />
                         <label for="card_20" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=2">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=2">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img"
                                     src="../images/main_dishes/Pierogi_z_twarogiem.webp" alt="Pierogi z twarogiem">
@@ -746,9 +700,9 @@
                 </div>
                 <div class="page_3" data-title="Dodatki">
                     <div class="card reveal">
-                        <input type="radio" id="card_21" name="menu_card" value="21">
+                        <input type="radio" id="card_21" name="menu_card" value="21" />
                         <label for="card_21" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=3">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=3">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/add_dishes/Pure.webp" alt="Pure">
 
@@ -778,9 +732,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_22" name="menu_card" value="22">
+                        <input type="radio" id="card_22" name="menu_card" value="22" />
                         <label for="card_22" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=3">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=3">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/add_dishes/Frytki.webp"
                                     alt="Frytki">
@@ -808,9 +762,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_23" name="menu_card" value="23">
+                        <input type="radio" id="card_23" name="menu_card" value="23" />
                         <label for="card_23" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=3">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=3">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/add_dishes/Ziemniaki_młode.webp"
                                     alt="Ziemniaki młode">
@@ -839,9 +793,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_24" name="menu_card" value="24">
+                        <input type="radio" id="card_24" name="menu_card" value="24" />
                         <label for="card_24" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=3">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=3">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img"
                                     src="../images/add_dishes/Wiejskie_ziemniaki.webp" alt="Wiejskie ziemniaki">
@@ -869,9 +823,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_25" name="menu_card" value="25">
+                        <input type="radio" id="card_25" name="menu_card" value="25" />
                         <label for="card_25" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=3">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=3">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/add_dishes/Kasza_Gryczana.webp"
                                     alt="Kasza Gryczana">
@@ -899,9 +853,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_26" name="menu_card" value="26">
+                        <input type="radio" id="card_26" name="menu_card" value="26" />
                         <label for="card_26" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=3">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=3">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/add_dishes/Kasza_Bulgur.webp"
                                     alt="Kasza Bulgur">
@@ -929,9 +883,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_27" name="menu_card" value="27">
+                        <input type="radio" id="card_27" name="menu_card" value="27" />
                         <label for="card_27" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=3">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=3">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/add_dishes/Kasza_Kuskus.webp"
                                     alt="Kasza Kuskus">
@@ -959,18 +913,21 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_28" name="menu_card" value="28">
+                        <input type="radio" id="card_28" name="menu_card" value="28" />
                         <label for="card_28" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=3">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=3">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/add_dishes/Makaron_Kokardki.webp"
                                     alt="Makaron Kokardki/Pióra/Świderki">
-                                <div class="img_scroll"><button class="card_img_select"><img loading="lazy"
-                                            src="../images/add_dishes/Makaron_Kokardki.webp" alt=""></button><button
-                                        class="card_img_select"><img loading="lazy"
-                                            src="../images/add_dishes/Makaron_Pióra.webp" alt=""></button><button
-                                        class="card_img_select"><img loading="lazy"
-                                            src="../images/add_dishes/Makaron_Świderki.webp" alt=""></button></div>
+                                <div class='img_scroll'><button class='card_img_select'><img loading='lazy'
+                                            src='../images/add_dishes/Makaron_Kokardki.webp'
+                                            alt='Makaron Kokardki/Pióra/Świderki 2 zdjęcie'></button><button
+                                        class='card_img_select'><img loading='lazy'
+                                            src='../images/add_dishes/Makaron_Pióra.webp'
+                                            alt='Makaron Kokardki/Pióra/Świderki 3 zdjęcie'></button><button
+                                        class='card_img_select'><img loading='lazy'
+                                            src='../images/add_dishes/Makaron_Świderki.webp'
+                                            alt='Makaron Kokardki/Pióra/Świderki 4 zdjęcie'></button></div>
                             </div>
                             <div class="card_text">
                                 <h3>Makaron Kokardki/Pióra/Świderki</h3>
@@ -994,9 +951,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_29" name="menu_card" value="29">
+                        <input type="radio" id="card_29" name="menu_card" value="29" />
                         <label for="card_29" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=3">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=3">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/add_dishes/Makaron_spaghetti.webp"
                                     alt="Makaron Spaghetti">
@@ -1024,9 +981,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_30" name="menu_card" value="30">
+                        <input type="radio" id="card_30" name="menu_card" value="30" />
                         <label for="card_30" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=3">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=3">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/add_dishes/Kotlety_Schabowe.webp"
                                     alt="Kotlety Schabowe">
@@ -1057,9 +1014,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_31" name="menu_card" value="31">
+                        <input type="radio" id="card_31" name="menu_card" value="31" />
                         <label for="card_31" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=3">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=3">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/add_dishes/Kotlety_Mielone.webp"
                                     alt="Kotlety Mielone">
@@ -1093,9 +1050,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_32" name="menu_card" value="32">
+                        <input type="radio" id="card_32" name="menu_card" value="32" />
                         <label for="card_32" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=3">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=3">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/add_dishes/Pikantne_Kotlety.webp"
                                     alt="Pikantne Kotlety">
@@ -1128,9 +1085,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_33" name="menu_card" value="33">
+                        <input type="radio" id="card_33" name="menu_card" value="33" />
                         <label for="card_33" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=3">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=3">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/add_dishes/Brizolka_Mięsna.webp"
                                     alt="Brizolka Mięsna">
@@ -1162,9 +1119,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_34" name="menu_card" value="34">
+                        <input type="radio" id="card_34" name="menu_card" value="34" />
                         <label for="card_34" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=3">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=3">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img"
                                     src="../images/add_dishes/Roladki_Z_Kurczaka_I_Grzybami.webp"
@@ -1196,9 +1153,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_35" name="menu_card" value="35">
+                        <input type="radio" id="card_35" name="menu_card" value="35" />
                         <label for="card_35" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=3">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=3">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/add_dishes/Udo_Z_Kurczaka.webp"
                                     alt="Udo Z Kurczaka">
@@ -1226,9 +1183,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_92" name="menu_card" value="92">
+                        <input type="radio" id="card_92" name="menu_card" value="92" />
                         <label for="card_92" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=3">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=3">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img"
                                     src="../images/add_dishes/Skrzydełka_Z_Kurczaka.webp" alt="Skrzydełka Z Kurczaka">
@@ -1236,13 +1193,13 @@
                             </div>
                             <div class="card_text">
                                 <h3>Skrzydełka Z Kurczaka</h3>
-                                <p class="gramm">500g</p>
+                                <p class='gramm'>500g</p>
                                 <p class="price">26.00 zł</p>
                                 <p class="ingredients">Przyprawy, Kurczak</p>
                             </div>
                             <div class="full_text">
                                 <h3>Skrzydełka Z Kurczaka</h3>
-                                <p class="gramm">500g</p>
+                                <p class='gramm'>500g</p>
                                 <p class="price">26.00 zł</p>
                                 <h4>Ingredients</h4>
                                 <ul>
@@ -1256,9 +1213,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_93" name="menu_card" value="93">
+                        <input type="radio" id="card_93" name="menu_card" value="93" />
                         <label for="card_93" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=3">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=3">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img"
                                     src="../images/add_dishes/Mięso_Wieprzowe_W_Sosie.webp"
@@ -1290,9 +1247,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_94" name="menu_card" value="94">
+                        <input type="radio" id="card_94" name="menu_card" value="94" />
                         <label for="card_94" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=3">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=3">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img"
                                     src="../images/add_dishes/Mięso_Z_Kurczaka_W_Sosie.webp"
@@ -1322,9 +1279,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_95" name="menu_card" value="95">
+                        <input type="radio" id="card_95" name="menu_card" value="95" />
                         <label for="card_95" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=3">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=3">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img"
                                     src="../images/add_dishes/Stek_Wieprzowy_W_Sosie.webp" alt="Stek Wieprzowy W Sosie">
@@ -1356,9 +1313,9 @@
                 </div>
                 <div class="page_4" data-title="Fast Food">
                     <div class="card reveal">
-                        <input type="radio" id="card_96" name="menu_card" value="96">
+                        <input type="radio" id="card_96" name="menu_card" value="96" />
                         <label for="card_96" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=4">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=4">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img"
                                     src="../images/fast_food/Hamburger_Wieprzowy.webp" alt="Hamburger Wieprzowy">
@@ -1385,9 +1342,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_97" name="menu_card" value="97">
+                        <input type="radio" id="card_97" name="menu_card" value="97" />
                         <label for="card_97" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=4">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=4">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img"
                                     src="../images/fast_food/Hamburger_Z_Kurczaka.webp" alt="Hamburger Z Kurczaka">
@@ -1414,9 +1371,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_98" name="menu_card" value="98">
+                        <input type="radio" id="card_98" name="menu_card" value="98" />
                         <label for="card_98" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=4">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=4">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img"
                                     src="../images/fast_food/Parówka_W_Ziemniakach.webp" alt="Parówka W Ziemniakach">
@@ -1443,9 +1400,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_99" name="menu_card" value="99">
+                        <input type="radio" id="card_99" name="menu_card" value="99" />
                         <label for="card_99" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=4">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=4">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/fast_food/Czebureki.webp"
                                     alt="Czebureki">
@@ -1474,9 +1431,9 @@
                 </div>
                 <div class="page_5" data-title="Grill">
                     <div class="card reveal">
-                        <input type="radio" id="card_100" name="menu_card" value="100">
+                        <input type="radio" id="card_100" name="menu_card" value="100" />
                         <label for="card_100" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=5">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=5">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/grill/Stek_Wieprzowy.webp"
                                     alt="Stek Wieprzowy">
@@ -1484,13 +1441,13 @@
                             </div>
                             <div class="card_text">
                                 <h3>Stek Wieprzowy</h3>
-                                <p class="gramm">500g</p>
+                                <p class='gramm'>500g</p>
                                 <p class="price">25.00 zł</p>
                                 <p class="ingredients">Mięso wieprzowe, Przyprawy</p>
                             </div>
                             <div class="full_text">
                                 <h3>Stek Wieprzowy</h3>
-                                <p class="gramm">500g</p>
+                                <p class='gramm'>500g</p>
                                 <p class="price">25.00 zł</p>
                                 <h4>Ingredients</h4>
                                 <ul>
@@ -1504,9 +1461,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_101" name="menu_card" value="101">
+                        <input type="radio" id="card_101" name="menu_card" value="101" />
                         <label for="card_101" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=5">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=5">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/grill/Szaszłyk_Wieprzowy.webp"
                                     alt="Szaszłyk Wieprzowy">
@@ -1514,13 +1471,13 @@
                             </div>
                             <div class="card_text">
                                 <h3>Szaszłyk Wieprzowy</h3>
-                                <p class="gramm">500g</p>
+                                <p class='gramm'>500g</p>
                                 <p class="price">35.00 zł</p>
                                 <p class="ingredients">None</p>
                             </div>
                             <div class="full_text">
                                 <h3>Szaszłyk Wieprzowy</h3>
-                                <p class="gramm">500g</p>
+                                <p class='gramm'>500g</p>
                                 <p class="price">35.00 zł</p>
                                 <h4>Ingredients</h4>
                                 <ul>
@@ -1533,9 +1490,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_102" name="menu_card" value="102">
+                        <input type="radio" id="card_102" name="menu_card" value="102" />
                         <label for="card_102" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=5">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=5">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/grill/Szaszłyk_Z_Kurczaka.webp"
                                     alt="Szaszłyk Z Kurczaka">
@@ -1543,13 +1500,13 @@
                             </div>
                             <div class="card_text">
                                 <h3>Szaszłyk Z Kurczaka</h3>
-                                <p class="gramm">500g</p>
+                                <p class='gramm'>500g</p>
                                 <p class="price">38.00 zł</p>
                                 <p class="ingredients">None</p>
                             </div>
                             <div class="full_text">
                                 <h3>Szaszłyk Z Kurczaka</h3>
-                                <p class="gramm">500g</p>
+                                <p class='gramm'>500g</p>
                                 <p class="price">38.00 zł</p>
                                 <h4>Ingredients</h4>
                                 <ul>
@@ -1562,22 +1519,22 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_103" name="menu_card" value="103">
+                        <input type="radio" id="card_103" name="menu_card" value="103" />
                         <label for="card_103" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=5">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=5">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/grill/Warzywa.webp" alt="Warzywa">
 
                             </div>
                             <div class="card_text">
                                 <h3>Warzywa</h3>
-                                <p class="gramm">500g</p>
+                                <p class='gramm'>500g</p>
                                 <p class="price">27.00 zł</p>
                                 <p class="ingredients">None</p>
                             </div>
                             <div class="full_text">
                                 <h3>Warzywa</h3>
-                                <p class="gramm">500g</p>
+                                <p class='gramm'>500g</p>
                                 <p class="price">27.00 zł</p>
                                 <h4>Ingredients</h4>
                                 <ul>
@@ -1590,9 +1547,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_104" name="menu_card" value="104">
+                        <input type="radio" id="card_104" name="menu_card" value="104" />
                         <label for="card_104" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=5">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=5">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/grill/Pieczarki_Białe.webp"
                                     alt="Pieczarki Białe">
@@ -1600,13 +1557,13 @@
                             </div>
                             <div class="card_text">
                                 <h3>Pieczarki Białe</h3>
-                                <p class="gramm">500g</p>
+                                <p class='gramm'>500g</p>
                                 <p class="price">27.00 zł</p>
                                 <p class="ingredients">None</p>
                             </div>
                             <div class="full_text">
                                 <h3>Pieczarki Białe</h3>
-                                <p class="gramm">500g</p>
+                                <p class='gramm'>500g</p>
                                 <p class="price">27.00 zł</p>
                                 <h4>Ingredients</h4>
                                 <ul>
@@ -1621,9 +1578,9 @@
                 </div>
                 <div class="page_6" data-title="Sałatki">
                     <div class="card reveal">
-                        <input type="radio" id="card_105" name="menu_card" value="105">
+                        <input type="radio" id="card_105" name="menu_card" value="105" />
                         <label for="card_105" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=6">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=6">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/salats/Letnia.webp" alt="Letnia">
 
@@ -1653,9 +1610,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_106" name="menu_card" value="106">
+                        <input type="radio" id="card_106" name="menu_card" value="106" />
                         <label for="card_106" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=6">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=6">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/salats/Sałatka_Grecka.webp"
                                     alt="Sałatka Grecka">
@@ -1690,9 +1647,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_107" name="menu_card" value="107">
+                        <input type="radio" id="card_107" name="menu_card" value="107" />
                         <label for="card_107" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=6">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=6">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/salats/Sałatka_Cezar.webp"
                                     alt="Sałatka Cezar">
@@ -1731,9 +1688,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_108" name="menu_card" value="108">
+                        <input type="radio" id="card_108" name="menu_card" value="108" />
                         <label for="card_108" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=6">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=6">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/salats/Sałatka_Z_Kurczakiem.webp"
                                     alt="Sałatka Z Kurczakiem">
@@ -1767,9 +1724,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_109" name="menu_card" value="109">
+                        <input type="radio" id="card_109" name="menu_card" value="109" />
                         <label for="card_109" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=6">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=6">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/salats/Sałatka_Pekińska.webp"
                                     alt="Sałatka Pekińska">
@@ -1800,9 +1757,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_110" name="menu_card" value="110">
+                        <input type="radio" id="card_110" name="menu_card" value="110" />
                         <label for="card_110" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=6">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=6">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/salats/Buraczki_Gotowane.webp"
                                     alt="Buraczki Gotowane">
@@ -1831,9 +1788,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_111" name="menu_card" value="111">
+                        <input type="radio" id="card_111" name="menu_card" value="111" />
                         <label for="card_111" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=6">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=6">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/salats/Marchewka.webp"
                                     alt="Marchewka">
@@ -1862,9 +1819,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_112" name="menu_card" value="112">
+                        <input type="radio" id="card_112" name="menu_card" value="112" />
                         <label for="card_112" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=6">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=6">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img"
                                     src="../images/salats/Marchewka_Po_Koreańsku.webp" alt="Marchewka Po Koreańsku">
@@ -1895,9 +1852,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_113" name="menu_card" value="113">
+                        <input type="radio" id="card_113" name="menu_card" value="113" />
                         <label for="card_113" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=6">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=6">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/salats/Buraczki_Po_Koreańsku.webp"
                                     alt="Buraczki Po Koreańsku">
@@ -1928,9 +1885,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_114" name="menu_card" value="114">
+                        <input type="radio" id="card_114" name="menu_card" value="114" />
                         <label for="card_114" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=6">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=6">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/salats/Kapusta_Kiszona.webp"
                                     alt="Kapusta Kiszona">
@@ -1963,9 +1920,9 @@
                 </div>
                 <div class="page_7" data-title="Sosy">
                     <div class="card reveal">
-                        <input type="radio" id="card_115" name="menu_card" value="115">
+                        <input type="radio" id="card_115" name="menu_card" value="115" />
                         <label for="card_115" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=7">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=7">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/souces/Sos_Ciemny.webp"
                                     alt="Sos Ciemny">
@@ -1992,9 +1949,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_116" name="menu_card" value="116">
+                        <input type="radio" id="card_116" name="menu_card" value="116" />
                         <label for="card_116" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=7">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=7">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/souces/Sos_Myśliwski.webp"
                                     alt="Sos Myśliwski">
@@ -2021,9 +1978,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_117" name="menu_card" value="117">
+                        <input type="radio" id="card_117" name="menu_card" value="117" />
                         <label for="card_117" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=7">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=7">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/souces/Sos_Pomidorowy_Ostry.webp"
                                     alt="Sos Pomidorowy Ostry">
@@ -2050,9 +2007,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_118" name="menu_card" value="118">
+                        <input type="radio" id="card_118" name="menu_card" value="118" />
                         <label for="card_118" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=7">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=7">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/souces/Sos_Czosnkowy.webp"
                                     alt="Sos Czosnkowy">
@@ -2079,9 +2036,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_119" name="menu_card" value="119">
+                        <input type="radio" id="card_119" name="menu_card" value="119" />
                         <label for="card_119" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=7">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=7">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/souces/Ketchup.webp"
                                     alt="Ketchup">
@@ -2108,9 +2065,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_120" name="menu_card" value="120">
+                        <input type="radio" id="card_120" name="menu_card" value="120" />
                         <label for="card_120" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=7">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=7">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/souces/Musztarda.webp"
                                     alt="Musztarda">
@@ -2137,9 +2094,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_121" name="menu_card" value="121">
+                        <input type="radio" id="card_121" name="menu_card" value="121" />
                         <label for="card_121" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=7">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=7">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/souces/Śmietana.webp"
                                     alt="Śmietana">
@@ -2168,9 +2125,9 @@
                 </div>
                 <div class="page_8" data-title="Napoje">
                     <div class="card reveal">
-                        <input type="radio" id="card_122" name="menu_card" value="122">
+                        <input type="radio" id="card_122" name="menu_card" value="122" />
                         <label for="card_122" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=8">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=8">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/drinks/Herbata.webp"
                                     alt="Herbata Czarna/Zielona/Owocowa/Cytrusowa">
@@ -2197,9 +2154,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_123" name="menu_card" value="123">
+                        <input type="radio" id="card_123" name="menu_card" value="123" />
                         <label for="card_123" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=8">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=8">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/drinks/Kompot_Owocowy.webp"
                                     alt="Kompot Owocowy">
@@ -2226,9 +2183,9 @@
                         </label>
                     </div>
                     <div class="card reveal">
-                        <input type="radio" id="card_124" name="menu_card" value="124">
+                        <input type="radio" id="card_124" name="menu_card" value="124" />
                         <label for="card_124" class="card_btn">
-                            <a class="back_btn" href="./menu.html?page=8">← Back</a>
+                            <a class="back_btn" href="./menu.php?page=8">← Back</a>
                             <div>
                                 <img loading="lazy" id="card_main_img" src="../images/drinks/Kompot_Jagodowy.webp"
                                     alt="Kompot Jagodowy">
