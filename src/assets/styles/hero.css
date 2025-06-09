@@ -82,10 +82,11 @@
 }
 
 .hero_image>img {
-    backface-visibility: inherit;
+    backface-visibility: hidden;
     position: absolute;
     width: var(--width);
     height: var(--height);
+    border-radius: 24px;
 }
 
 #img_front {
@@ -163,24 +164,65 @@
 }
 
 #dynamic_text_1 {
-    display: var(--text_1, inline-block);
+    display: var(--text_1);
 }
 
 #dynamic_text_2 {
-    display: var(--text_2, none);
+    display: var(--text_2);
 }
 
 #dynamic_text_3 {
-    display: var(--text_3, none);
+    display: var(--text_3);
 }
 
 #dynamic_text_4 {
-    display: var(--text_4, none);
+    display: var(--text_4);
 }
 
 @keyframes typing {
     to {
         clip-path: inset(0 0 0 0);
         transform: scale(1);
+    }
+}
+
+@supports not (animation-timeline: view()) {
+
+    .hero {
+        animation: none;
+        scroll-snap-type: none;
+        height: auto;
+    }
+
+    .hero_sect {
+        position: static;
+        height: auto;
+        min-height: 100vh;
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    [id^="dynamic_text_"] {
+        display: inline-block;
+    }
+
+    .hero .empty {
+        display: none;
+    }
+
+    .hero_image {
+        width: 90%;
+        height: 100%;
+        max-width: 1200px;
+        transform: none;
+    }
+
+    .hero_image>img {
+        position: static;
+        transform: none;
+    }
+
+    [id^="img_"] {
+        transform: none !important;
     }
 }
