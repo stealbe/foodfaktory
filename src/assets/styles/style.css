@@ -509,3 +509,146 @@ footer a {
         animation: pulse 1s ease-in-out 3;
     }
 }
+
+footer {
+    line-height: 1.5;
+    padding: 30px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.footer_bottom_text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.footer_bottom_text p {
+    font-size: 16px;
+    color: #8C6E63;
+}
+
+.footer_top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    column-gap: 320px;
+}
+
+.footer_bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    column-gap: 320px;
+}
+
+footer .text {
+    font-size: clamp(52px, 18vw, 120px);
+}
+
+footer .line {
+    width: 100%;
+    border: 1px solid #3E2522;
+}
+
+footer a,
+footer p {
+    width: fit-content;
+    font-size: clamp(20px, 2.4vw, 32px);
+}
+
+.feedback {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex: 1 0 auto;
+    max-width: 100%;
+}
+
+.feedback a {
+    color: #8c6e63;
+}
+
+.links_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1 0 auto;
+    max-width: 100%;
+    gap: 32px;
+}
+
+.feedback>div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 24px;
+}
+
+.feedback a[href^="tel:"] {
+    flex: 1 0 auto;
+    max-width: 50%;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    height: fit-content;
+}
+
+.social a {
+    font-size: clamp(16px, 2.8vw, 28px);
+    color: #3E2522;
+    gap: 6px;
+}
+
+.links_container a,
+.links_container p {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 4px;
+    text-decoration: none;
+    color: #3E2522;
+    font-size: 20px;
+}
+
+footer img[src*="link.svg"] {
+    width: 12px;
+    transform: rotate(-45deg);
+    position: relative;
+    top: 0;
+    left: -20px;
+    opacity: 0;
+    filter: brightness(0) saturate(100%) invert(9%) sepia(8%) saturate(4767%) hue-rotate(320deg) brightness(98%) contrast(82%);
+}
+
+.social img[src*="link.svg"] {
+    width: 24px;
+}
+
+a:hover img[src*="link.svg"] {
+    opacity: 1;
+    transition: 0.35s ease-in-out;
+    left: 0;
+}
+
+@media (max-width: 600px) {
+    footer img[src*="link.svg"] {
+        display: none;
+    }
+}
