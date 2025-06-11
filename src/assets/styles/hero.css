@@ -44,7 +44,7 @@
 
 .hero_text>h2,
 .hero_text>h3 {
-    font-size: clamp(2rem, 6vw, 4rem);
+    font-size: clamp(2rem, 4vw, 4rem);
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     transition: 0.5s ease;
@@ -52,9 +52,10 @@
     text-decoration-thickness: 1px;
 }
 
-.hero_text p {
+.hero_text p,
+.hero_text li {
     font-family: 'Courier New', Courier, monospace;
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-size: clamp(1rem, 1.8vw, 2rem);
     transition: 0.5s ease;
     margin: 8px 0;
     width: 100%;
@@ -72,8 +73,8 @@
 }
 
 .hero_image {
-    --width: clamp(300px, 50vw, 600px);
-    --height: clamp(300px, 50vw, 600px);
+    --width: clamp(150px, 20vw, 400px);
+    --height: clamp(150px, 20vw, 400px);
     width: var(--width);
     height: var(--height);
     transform-style: preserve-3d;
