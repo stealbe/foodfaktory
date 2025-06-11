@@ -205,7 +205,7 @@
     @keyframes hero {
 
         0% {
-            background: url(../images/hero_img/street.png);
+            background: url(../images/hero_img/street.webp);
             --image_rotation: 0deg;
             --text_1: inline-block;
             --text_2: none;
@@ -214,7 +214,7 @@
         }
 
         25% {
-            background: url(../images/hero_img/street.png);
+            background: url(../images/hero_img/street.webp);
             --image_rotation: 0deg;
             --text_1: inline-block;
             --text_2: none;
@@ -223,7 +223,7 @@
         }
 
         50% {
-            background: url(../images/hero_img/outdoor.png);
+            background: url(../images/hero_img/outdoor.webp);
             --image_rotation: -90deg;
             --text_1: none;
             --text_2: inline-block;
@@ -232,7 +232,7 @@
         }
 
         75% {
-            background: url(../images/hero_img/hoal.png);
+            background: url(../images/hero_img/hoal.webp);
             --image_rotation: -180deg;
             --text_1: none;
             --text_2: none;
@@ -241,7 +241,7 @@
         }
 
         100% {
-            background: url(../images/hero_img/kitchen.png);
+            background: url(../images/hero_img/kitchen.webp);
             --image_rotation: -270deg;
             --text_1: none;
             --text_2: none;
