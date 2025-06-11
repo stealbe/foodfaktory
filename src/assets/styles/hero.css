@@ -204,6 +204,15 @@
 
     @keyframes hero {
 
+        0% {
+            background: url(../images/hero_img/street.png);
+            --image_rotation: 0deg;
+            --text_1: inline-block;
+            --text_2: none;
+            --text_3: none;
+            --text_4: none;
+        }
+
         25% {
             background: url(../images/hero_img/street.png);
             --image_rotation: 0deg;
