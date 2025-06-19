@@ -251,6 +251,18 @@
     }
 }
 
+@media (max-width: 1180px) {
+
+    .hero_sect {
+        top: 0;
+        height: 100vh;
+    }
+
+    .hero_text {
+        height: 100vh;
+    }
+}
+
 @supports not (animation-timeline: view()) {
 
     .hero {
