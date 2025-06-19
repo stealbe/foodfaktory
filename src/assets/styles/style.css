@@ -131,6 +131,15 @@ nav a[href^="tel:"] {
     font-size: 28px;
 }
 
+nav #second_ph {
+    display: flex;
+    flex-direction: column;
+}
+
+.second_ph br{
+    display: none;
+}
+
 #cart_link,
 nav [href*="order"] {
     background: rgb(211, 144, 20);
