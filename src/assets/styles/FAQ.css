@@ -49,6 +49,7 @@ main {
     width: 95%;
     color: #3E2522;
     margin: 20px 0 20px 0;
+    gap: 16px;
 }
 
 .FAQ_card img {
